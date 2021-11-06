@@ -76,6 +76,7 @@ main {
 	flex-direction: column;
 	padding-top: 100px;
 	text-align: center;
+	padding-top: 25vh;
 }
 
 .hero h1 {
@@ -109,30 +110,26 @@ main {
 .scroll-image {
 	padding: 10px;
 }
-.description {
+.about {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
 }
 
-.description img {
-	width: 60%;
+.about img {
+	width: 70vw;
 }
 
-.text-pos {
-	position: absolute;
-	width: 18%;
-	top: 5%;
-	left: 60%;
-}
-
-.desc-text {
+.about-text {
+	width: 15%;
 	padding: 20px;
-}
 
-.text-bg {
+	position: absolute;
+	top: 5%;
+	left: 65%;
+
 	background-color: rgba(255, 197, 39, 0.801);
 	font-family: 'Roboto';
 	color: black;
@@ -142,30 +139,29 @@ main {
 	box-shadow: black 10px 10px 20px;
 }
 
-.description h2 {
+.about-text h2 {
 	padding: 5px;
 }
 
-/* Sekcja about */
-.about {
-	height: 500px;
+/* Sekcja statystyki */
+.stats {
+	height: 450px;
 	background-color: rgba(0, 0, 0, 0.034);
 }
-.about h2 {
+.stats h2 {
 	font-size: 40px;
 	text-align: center;
-	padding: 60px 0;
+	padding: 50px 0;
 	color: black;
 }
 
-.about-text {
+.stats-text {
 	flex-direction: row;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.about h3 {
+.stats h3 {
 	font-size: 20px;
 }
 
@@ -256,17 +252,57 @@ footer {
 .instagram:hover {
 	stroke: #dd2a7b;
 }
-@media (max-width: 1024px) {
-	.description {
-		height: 300px;
-	}
 
-	.history h2 {
-		font-size: 25px;
-		padding: 15px;
-	}
+@media only screen and (min-width: 2560px) {
+}
 
-	.history p {
-		font-size: 14.5px;
-	}
+@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+}
+
+@media only screen and (min-width: 1680px) and (max-width: 1919px) {
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1679px) {
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1439px) {
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1399px) {
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1279px) {
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+}
+
+@media only screen and (min-width: 720px) and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 640px) and (max-width: 719px) {
+}
+
+@media only screen and (min-width: 600px) and (max-width: 639px) {
+}
+
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+}
+
+@media only screen and (max-width: 479px) {
 }
