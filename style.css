@@ -8,10 +8,13 @@
 }
 
 nav {
+	position: fixed;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	height: 60px;
+	background-color: #fff;
+	z-index: 1;
 }
 
 nav h2 {
@@ -51,17 +54,19 @@ main {
 .hero {
 	color: white;
 	background-color: #333;
-	/* background-image: url(./img/baner.jpg); */
+	background-image: url(./img/baner.jpg);
 	background-size: 100%;
-	background-position: center right;
+	background-position: 50% 40%;
 	width: 100%;
-	height: 600px;
+	height: 100vh;
 }
 
 .hero-bg {
+	display: flex;
+	justify-content: center;
 	background-color: rgba(0, 0, 0, 0.692);
 	width: 100%;
-	height: 600px;
+	height: 100vh;
 }
 
 .hero-text {
@@ -144,7 +149,7 @@ main {
 /* Sekcja about */
 .about {
 	height: 500px;
-	background-color: rgba(0, 0, 0, 0.075);
+	background-color: rgba(0, 0, 0, 0.034);
 }
 .about h2 {
 	font-size: 40px;
@@ -188,7 +193,7 @@ main {
 	flex-direction: row;
 	height: 600px;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.109);
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .history-img {
@@ -215,37 +220,29 @@ main {
 
 footer {
 	display: flex;
-	background-color: rgb(71, 70, 70);
-	width: 100%;
-	height: 120px;
-	text-align: center;
-	justify-content: left;
 	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.192);
+	width: 100%;
+	height: 100px;
 }
 
-footer span {
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.footer-container {
-	height: 70%;
-	width: 20%;
-	border-radius: 10px;
-	padding: 10px;
-	color: black;
+.media {
+	display: flex;
+	justify-content: space-between;
+	width: 40%;
 }
 
 .media-images {
-	width: 100px;
+	width: 70px;
 	transition: all linear 0.4s;
 }
 
 .fill {
-	fill: rgb(255, 197, 39);
+	fill: #333;
 }
 .stroke {
-	stroke: rgb(255, 197, 39);
+	stroke: #333;
 }
 
 .discord:hover {
@@ -253,7 +250,7 @@ footer span {
 }
 
 .github:hover {
-	fill: #fff;
+	fill: rgb(0, 0, 0);
 }
 
 .instagram:hover {
