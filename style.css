@@ -23,7 +23,7 @@ nav h2 {
 	text-align: center;
 }
 .clog {
-	width: 40%;
+	width: 38%;
 }
 
 .nav-cont {
@@ -45,6 +45,15 @@ nav a {
 
 nav a:hover {
 	border-bottom: black solid 3px;
+}
+
+.clog2 {
+	width: 10%;
+}
+
+.fas {
+	font-size: 40px;
+	margin-top: 0.5rem;
 }
 
 main {
@@ -110,6 +119,7 @@ main {
 .scroll-image {
 	padding: 10px;
 }
+
 .about {
 	position: relative;
 	display: flex;
