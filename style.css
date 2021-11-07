@@ -161,7 +161,7 @@ main {
 .stats h2 {
 	font-size: 40px;
 	text-align: center;
-	padding: 50px 0;
+	padding: 60px 0;
 	color: black;
 }
 
@@ -177,7 +177,7 @@ main {
 
 .icon-cont {
 	padding: 20px;
-	margin: 0 20px 0 20px;
+	margin: 0 70px;
 	width: 200px;
 	height: 200px;
 	background-color: rgba(255, 197, 39, 0.808);
@@ -187,12 +187,36 @@ main {
 }
 .icon-cont:hover {
 	box-shadow: rgb(44, 44, 44) 20px 20px 20px;
-	margin: -15px 20px 15px 20px;
+	margin: -15px 70px 15px;
 }
 
 .icon {
 	width: 100px;
 }
+
+.hidden {
+	visibility: hidden;
+}
+
+.ps {
+	width: 10vw;
+	position: absolute;
+}
+
+.people-ps {
+	background-color: #fff;
+	left: 35vw;
+}
+
+.home-ps {
+	background-color: #fff;
+}
+
+.teritory-ps {
+	background-color: #fff;
+}
+
+/* sekcja historia */
 
 .history {
 	display: flex;
