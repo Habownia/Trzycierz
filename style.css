@@ -271,6 +271,8 @@ footer {
 	background-color: rgba(0, 0, 0, 0.192);
 	width: 100%;
 	height: 100px;
+	height: 15vh;
+	padding-bottom: 5vh;
 }
 
 .media {
@@ -293,6 +295,31 @@ footer {
 
 .discord:hover {
 	fill: #5866ef;
+	cursor: pointer;
+}
+
+.discord-ps {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	top: 60px;
+	left: -100px;
+
+	height: 5vh;
+	background-color: #5867ef60;
+	border-radius: 10px 0 10px 0;
+	padding: 5px;
+	transition: all ease-in-out 0.4s;
+}
+
+.discord-ps p {
+	margin: 0;
+}
+
+.discord-ps a {
+	display: inline-block;
 }
 
 .github:hover {
