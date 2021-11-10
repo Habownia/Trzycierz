@@ -1,10 +1,19 @@
 * {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
 	scroll-behavior: smooth;
 	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
 }
 
 nav {
@@ -14,7 +23,7 @@ nav {
 	width: 100%;
 	height: 60px;
 	background-color: #fff;
-	z-index: 1;
+	z-index: 10;
 }
 
 nav h2 {
@@ -22,6 +31,7 @@ nav h2 {
 	padding: 10px;
 	text-align: center;
 }
+
 .clog {
 	width: 38%;
 }
@@ -45,6 +55,7 @@ nav a {
 
 nav a:hover {
 	border-bottom: black solid 3px;
+	color: black;
 }
 
 .clog2 {
@@ -128,19 +139,20 @@ main {
 	justify-content: center;
 }
 
-.about img {
+.about-carousel {
 	width: 70vw;
 }
 
 .about-text {
 	width: 15%;
 	padding: 20px;
+	z-index: 1;
 
 	position: absolute;
 	top: 5%;
 	left: 65%;
 
-	background-color: rgba(255, 197, 39, 0.801);
+	background-color: rgba(255, 197, 39, 0.897);
 	font-family: 'Roboto';
 	color: black;
 	width: 18%;
@@ -150,7 +162,8 @@ main {
 }
 
 .about-text h2 {
-	padding: 5px;
+	text-transform: uppercase;
+	font-size: 25px;
 }
 
 /* Sekcja statystyki */
@@ -173,6 +186,8 @@ main {
 
 .stats h3 {
 	font-size: 20px;
+	padding: 2px;
+	margin: 0;
 }
 
 .icon-cont {
@@ -204,10 +219,14 @@ main {
 	margin-top: 30px;
 	background-color: rgba(255, 197, 39, 0.808);
 	border-radius: 10px;
-	transition: all ease-in-out .5s;
+	transition: all ease-in-out 0.5s;
 	z-index: 1;
 }
-.stats-cont{
+
+.ps p {
+	margin: 0;
+}
+.stats-cont {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -225,10 +244,8 @@ main {
 }
 
 .history-img {
-	background-image: url(./img/history.jpg);
-	background-position: 30% 20%;
-	background-size: cover;
-	width: 50%;
+	width: 50vw;
+	height: 64vh;
 }
 
 .history-container {
@@ -237,12 +254,13 @@ main {
 
 .history h2 {
 	text-align: center;
-	padding: 40px;
-	font-size: 30px;
+	padding: 30px;
+	margin: 0;
+	font-size: 25px;
 }
 
 .history p {
-	margin: 0 10% 0 10%;
+	margin: 0 8% 0 8%;
 	font-size: 18px;
 }
 
@@ -285,7 +303,7 @@ footer {
 	stroke: #dd2a7b;
 }
 
-@media only screen and (min-width: 2560px) {
+/* @media only screen and (min-width: 2560px) {
 }
 
 @media only screen and (min-width: 1920px) and (max-width: 2559px) {
@@ -337,4 +355,4 @@ footer {
 }
 
 @media only screen and (max-width: 479px) {
-}
+} */

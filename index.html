@@ -13,10 +13,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900"
         rel="stylesheet">
+
     <title>Trzycierz</title>
     <link rel="shortcut icon" href="./img/trzycierz.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7ff899f99f.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -50,14 +54,36 @@
 
         <section class="about">
             <div class="about-text">
-                <h2>TRZYCIERZ</h2>
+                <h2>Trzycierz</h2>
                 <p>wieś w Polsce położona w województwie małopolskim, w powiecie nowosądeckim, w gminie Korzenna.
                     <br>
                     Znajduje się na Pogórzu Rożnowskim w dolinie potoku Jasienianka.
                 </p>
             </div>
 
-            <img src="./img/about-img.jpg" alt="kapiliczka w Trzycierzu">
+            <div id="carouselExampleControls" class="carousel slide about-carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img//about/about1.jpg" class="d-block w-100" alt="Kapliczka w Górnym Trzycierzu">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img//about/about2.jpg" class="d-block w-100" alt="Wjazd do Trzycierza">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img//about/about3.jpg" class="d-block w-100" alt="Mała kapliczka w Trzycierzu">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
 
         <section class="stats" id="stats">
@@ -101,9 +127,21 @@
         </section>
 
         <section class="history" id="history">
-            <div class="history-img"></div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner history-img">
+                    <div class="carousel-item active">
+                        <img src="./img/history/history1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/history/history2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/history/history3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
             <div class="history-container">
-                <h2>Historia</h2>
+                <h2>Historia Trzycierza</h2>
                 <p>Wieś powstała we wczesnym średniowieczu i od końca XIII wieku należała do dóbr rycerskich, najpierw
                     do
                     rodu pieczętującego się herbem Wąż, a później do Strzemieńczyków / od II połowy XIV wieku/. Od XIV
@@ -168,7 +206,10 @@
             </svg>
         </div>
     </footer>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
-<script src="./index.js"></script>
 
 </html>
