@@ -22,11 +22,23 @@ function teritoryClick() {
 }
 teritory.addEventListener('click', teritoryClick);
 
-const discord = document.querySelector('#discord');
-const discordPs = document.querySelector('#discord-ps');
+// DARK MODE
+const darkModeBtn = document.querySelector('#dark-mode');
 
-function discordClick() {
-	discordPs.classList.toggle('hidden');
+// nav
+const nav = document.querySelector('#nav');
+const navA1 = document.querySelector('#nav-a1');
+const navA2 = document.querySelector('#nav-a2');
+const navA3 = document.querySelector('#nav-a3');
+const navA4 = document.querySelector('#nav-a4');
+function darkMode() {
+	darkModeBtn.classList.toggle('fa-moon');
+	darkModeBtn.classList.toggle('fa-sun');
+	// NAV
+	nav.classList.toggle('dark-nav');
+	navA1.classList.toggle('dark-nav-a');
+	navA2.classList.toggle('dark-nav-a');
+	navA3.classList.toggle('dark-nav-a');
+	navA4.classList.toggle('dark-nav-a');
 }
-discord.addEventListener('click', discordClick);
-
+darkModeBtn.addEventListener('click', darkMode);
