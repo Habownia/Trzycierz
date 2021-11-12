@@ -147,7 +147,8 @@ nav a:hover {
 }
 
 .about-text {
-	width: 15%;
+	width: 18%;
+	height: 23%;
 	padding: 20px;
 	z-index: 1;
 
@@ -158,8 +159,6 @@ nav a:hover {
 	background-color: rgba(255, 197, 39, 0.897);
 	font-family: 'Roboto';
 	color: black;
-	width: 18%;
-	height: 200px;
 	border-radius: 1%;
 	box-shadow: black 10px 10px 20px;
 }
@@ -171,7 +170,7 @@ nav a:hover {
 
 /* Sekcja statystyki */
 .stats {
-	height: 550px;
+	height: 65vh;
 	background-color: #f0f2f5;
 	scroll-margin-top: 50px;
 }
@@ -242,11 +241,11 @@ nav a:hover {
 .history {
 	display: flex;
 	flex-direction: row;
-	height: 700px;
+	height: 80vh;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: #141414;
 	padding: 10px;
-	background: linear-gradient(180deg, #f0f2f5 0%, rgb(223, 222, 222) 20%);
+	background-color: #f0f2f5;
 	scroll-margin-top: 55px;
 }
 
@@ -275,7 +274,7 @@ nav a:hover {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	background-color: #dfdede;
+	background-color: #f0f2f5;
 }
 
 .map-container {
@@ -293,7 +292,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #d0d2d6;
+	background-color: #dfdede;
 	width: 100%;
 	height: 100px;
 	height: 15vh;
@@ -369,20 +368,16 @@ footer {
 
 /* DARK HISTORY */
 .dark-history {
-	background: linear-gradient(
-		180deg,
-		rgba(16, 16, 16, 1) 0%,
-		rgba(20, 20, 20, 1) 20%
-	);
+	background-color: rgba(16, 16, 16, 1);
 	color: #e7e9ed;
 }
 
-.dark-history-b{
+.dark-history-b {
 	color: rgb(255, 197, 39);
 }
 
 .dark-map {
-	background-color: rgba(20, 20, 20, 1);
+	background-color: #101010;
 	color: #e7e9ed;
 }
 
@@ -396,7 +391,7 @@ footer {
 }
 
 .dark-instagram:hover {
-	stroke: #eee
+	stroke: #eee;
 }
 
 .dark-media {
@@ -406,15 +401,151 @@ footer {
 .dark-media:hover {
 	fill: #eee;
 }
-/* @media only screen and (min-width: 2560px) {
-}
 
-@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+@media only screen and (min-width: 2560px) {
+	nav {
+		height: 90px;
+	}
+
+	nav h2 {
+		font-size: 50px;
+	}
+
+	.nav-cont {
+		width: 30%;
+	}
+
+	nav a {
+		font-size: 30px;
+		border-bottom: rgba(0, 0, 0, 0) solid 3px;
+	}
+
+	.clog {
+		width: 30%;
+	}
+
+	.fas {
+		font-size: 70px;
+		margin-top: 10px;
+	}
+
+	.hero {
+		background-size: 120%;
+		background-position: 100% 40%;
+		width: 100%;
+		height: 100vh;
+	}
+
+	.hero h1 {
+		font-size: 100px;
+	}
+
+	.hero h2 {
+		font-size: 50px;
+	}
+
+	.hero-btn {
+		width: 200px;
+		height: 70px;
+		padding: 10px;
+		font-size: 30px;
+	}
+
+	.scroll-image {
+		padding: 10px;
+		width: 10%;
+	}
+
+	.about {
+		scroll-margin-top: 100px;
+	}
+
+	.about-text {
+		font-size: 23px;
+	}
+
+	.about-text h2 {
+		font-size: 40px;
+	}
+
+	.stats {
+		height: 1000px;
+	}
+
+	.stats-h2 {
+		font-size: 80px;
+	}
+
+	.stats h3 {
+		font-size: 20px;
+		padding: 2px;
+	}
+
+	.icon-cont {
+		padding: 40px;
+		width: 400px;
+		height: 400px;
+	}
+
+	.icon {
+		width: 200px;
+	}
+
+	.stats h3 {
+		font-size: 40px;
+	}
+
+	.stats p {
+		font-size: 30px;
+	}
+
+	.ps {
+		margin: 40px;
+		width: 14vw;
+	}
+
+	.history {
+		height: 1000px;
+		scroll-margin-top: 80px;
+	}
+
+	.history-img {
+		height: 80vh;
+		padding: 30px;
+	}
+
+	.history h2 {
+		font-size: 70px;
+	}
+
+	.history p {
+		font-size: 30px;
+	}
+
+	.map-container {
+		width: 56%;
+	}
+
+	.map h2 {
+		font-size: 60px;
+	}
+
+	.map p {
+		font-size: 30px;
+	}
+
+	.media {
+		width: 50%;
+	}
+
+	.media-images {
+		width: 110px;
+	}
 }
 
 @media only screen and (min-width: 1680px) and (max-width: 1919px) {
 }
-
+/*
 @media only screen and (min-width: 1600px) and (max-width: 1679px) {
 }
 
