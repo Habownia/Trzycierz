@@ -39,6 +39,8 @@ const stats = document.querySelector('#stats');
 const statsH2 = document.querySelector('#stats-h2');
 // history
 const history = document.querySelector('#history');
+// map
+const map = document.querySelector('#map');
 // footer
 const footer = document.querySelector('#footer');
 const instagram = document.querySelector('#instagram');
@@ -62,6 +64,8 @@ function darkMode() {
 	statsH2.classList.toggle('dark-stats-h2');
 	// HISTORY
 	history.classList.toggle('dark-history');
+	// MAP
+	map.classList.toggle('dark-map');
 	// FOOTER
 	footer.classList.toggle('dark-footer');
 	instagram.classList.toggle('dark-instagram');

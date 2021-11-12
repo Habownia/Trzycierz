@@ -137,9 +137,9 @@ nav a:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	transition: all linear 0.5s;
 	padding: 10px;
 	background-color: #f0f2f5;
+	scroll-margin-top: 50px;
 }
 
 .about-carousel {
@@ -173,7 +173,7 @@ nav a:hover {
 .stats {
 	height: 550px;
 	background-color: #f0f2f5;
-	transition: all linear 0.5s;
+	scroll-margin-top: 50px;
 }
 .stats-h2 {
 	font-size: 40px;
@@ -245,9 +245,9 @@ nav a:hover {
 	height: 700px;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.1);
-	transition: all ease-in-out 0.5s;
 	padding: 10px;
 	background: linear-gradient(180deg, #f0f2f5 0%, rgb(223, 222, 222) 20%);
+	scroll-margin-top: 55px;
 }
 
 .history-img {
@@ -269,6 +269,24 @@ nav a:hover {
 .history p {
 	margin: 0 8% 0 8%;
 	font-size: 20px;
+}
+
+.map {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	background-color: #dfdede;
+}
+
+.map-container {
+	width: 50%;
+	padding: 10vh 5vh 5vh;
+}
+
+.map-iframe {
+	width: 40vw;
+	height: 60vh;
+	padding: 1%;
 }
 
 footer {
@@ -317,7 +335,7 @@ footer {
 }
 
 .transition-dark {
-	transition: all linear 0.6s;
+	transition: all ease-in-out 0.3s;
 }
 
 /* DARK NAV */
@@ -359,6 +377,15 @@ footer {
 	color: #e7e9ed;
 }
 
+.dark-history-b{
+	color: rgb(255, 197, 39);
+}
+
+.dark-map {
+	background-color: rgba(20, 20, 20, 1);
+	color: #e7e9ed;
+}
+
 /* DARK FOOTER */
 .dark-footer {
 	background-color: #242526;
@@ -369,7 +396,7 @@ footer {
 }
 
 .dark-instagram:hover {
-	stroke: #a8a8a8;
+	stroke: #eee
 }
 
 .dark-media {
@@ -377,7 +404,7 @@ footer {
 }
 
 .dark-media:hover {
-	fill: #a8a8a8;
+	fill: #eee;
 }
 /* @media only screen and (min-width: 2560px) {
 }
