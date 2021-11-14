@@ -606,7 +606,7 @@ footer {
 	}
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+@media only screen and (min-width: 1366px) and (max-width: 1599px) {
 	.hero {
 		background-size: 110%;
 		background-position: 90% 40%;
@@ -642,19 +642,137 @@ footer {
 		font-size: 18px;
 	}
 }
-/*
-@media only screen and (min-width: 1366px) and (max-width: 1399px) {
-}
 
-@media only screen and (min-width: 1280px) and (max-width: 1365px) {
-}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+	.clog {
+		width: 28%;
+	}
 
-@media only screen and (min-width: 1200px) and (max-width: 1279px) {
+	.nav-cont {
+		width: 28%;
+	}
+
+	nav a {
+		font-size: 15px;
+	}
+
+	.hero {
+		background-size: 110%;
+		background-position: 90% 40%;
+	}
+
+	.about-carousel {
+		width: 1100px;
+	}
+
+	.about-text {
+		width: 300px;
+		height: 200px;
+		left: 66%;
+	}
+
+	.about-text h2 {
+		font-size: 22px;
+	}
+
+	.about-text p {
+		font-size: 15px;
+	}
+
+	.ps {
+		width: 200px;
+	}
+
+	.history {
+		height: 700px;
+	}
+
+	.history h2 {
+		padding: 15px 0;
+	}
+
+	.history p {
+		font-size: 18px;
+	}
+
+	.history-img {
+		padding-top: 80px;
+	}
+
+	.map-iframe {
+		height: 350px;
+	}
+
+	.map-container {
+		padding-top: 40px;
+	}
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
-}
+	.clog {
+		width: 26%;
+	}
 
+	.nav-cont {
+		width: 28%;
+	}
+
+	nav a {
+		font-size: 15px;
+	}
+
+	.hero {
+		background-size: 120%;
+		background-position: 100% 100%;
+	}
+
+	.about-carousel {
+		width: 900px;
+	}
+
+	.about-text {
+		width: 280px;
+		height: 200px;
+		left: 64%;
+	}
+
+	.about-text h2 {
+		font-size: 23px;
+	}
+
+	.about-text p {
+		font-size: 13.8px;
+	}
+
+	.ps {
+		width: 200px;
+	}
+
+	.history {
+		height: 700px;
+	}
+
+	.history h2 {
+		padding: 15px 0;
+	}
+
+	.history p {
+		font-size: 16px;
+	}
+
+	.history-img {
+		padding-top: 80px;
+	}
+
+	.map-iframe {
+		height: 350px;
+	}
+
+	.map-container {
+		padding-top: 40px;
+	}
+}
+/*
 @media only screen and (min-width: 960px) and (max-width: 1023px) {
 }
 
