@@ -185,6 +185,7 @@ nav a:hover {
 	flex-direction: row;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .stats h3 {
@@ -284,7 +285,7 @@ nav a:hover {
 
 .map-iframe {
 	width: 40vw;
-	height: 60vh;
+	height: 550px;
 	padding: 1%;
 }
 
@@ -510,7 +511,7 @@ footer {
 	}
 
 	.history-img {
-		height: 80vh;
+		height: 750px;
 		padding: 30px;
 	}
 
@@ -543,18 +544,105 @@ footer {
 	}
 }
 
-@media only screen and (min-width: 1680px) and (max-width: 1919px) {
+@media only screen and (min-width: 1600px) and (max-width: 1679px) {
+	nav {
+		height: 70px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	.clog {
+		width: 35%;
+	}
+
+	.nav-cont {
+		width: 25%;
+	}
+
+	nav a {
+		font-size: 20px;
+	}
+
+	.fas {
+		font-size: 50px;
+	}
+
+	.about-text {
+		width: 350px;
+		height: 200px;
+		left: 62%;
+	}
+
+	.about-text h2 {
+		font-size: 25px;
+	}
+
+	.history h2 {
+		font-size: 40px;
+	}
+
+	.history-img {
+		padding-left: 15px;
+	}
+
+	.map h2 {
+		font-size: 40px;
+		padding: 30px 0;
+	}
+
+	.map p {
+		font-size: 20px;
+	}
+
+	.map-iframe {
+		width: 45vw;
+		height: 500px;
+	}
+
+	.map-container {
+		padding-top: 20px;
+	}
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+	.hero {
+		background-size: 110%;
+		background-position: 90% 40%;
+	}
+
+	.about-carousel {
+		width: 1350px;
+	}
+
+	.about-text {
+		width: 350px;
+		height: 200px;
+		left: 70%;
+	}
+
+	.about-text h2 {
+		font-size: 25px;
+	}
+
+	.ps {
+		width: 200px;
+	}
+
+	.history {
+		height: 700px;
+	}
+
+	.history h2 {
+		padding: 15px 0;
+	}
+
+	.history p {
+		font-size: 18px;
+	}
 }
 /*
-@media only screen and (min-width: 1600px) and (max-width: 1679px) {
-}
-
-@media only screen and (min-width: 1440px) and (max-width: 1599px) {
-}
-
-@media only screen and (min-width: 1400px) and (max-width: 1439px) {
-}
-
 @media only screen and (min-width: 1366px) and (max-width: 1399px) {
 }
 
