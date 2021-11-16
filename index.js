@@ -1,3 +1,11 @@
+const hero = document.querySelector('#hero');
+const heroBtn = document.querySelector('#hero-btn');
+
+function heroClick() {
+	hero.classList.toggle('hero-sus');
+}
+heroBtn.addEventListener('click', heroClick);
+
 const people = document.querySelector('#people');
 const peoplePs = document.querySelector('#people-ps');
 

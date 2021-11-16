@@ -79,6 +79,12 @@ nav a:hover {
 	background-position: 50% 40%;
 	width: 100%;
 	height: 100vh;
+	transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.hero-sus {
+	background-image: url(./img/sus.png);
+	background-position: 100% 90%;
 }
 
 .hero-bg {
@@ -436,6 +442,9 @@ footer {
 		width: 100%;
 		height: 100vh;
 	}
+	.hero-sus {
+		background-position: 70% 90%;
+	}
 
 	.hero h1 {
 		font-size: 100px;
@@ -725,6 +734,9 @@ footer {
 		background-size: 120%;
 		background-position: 100% 100%;
 	}
+	.hero-sus {
+		background-position: 70% 90%;
+	}
 
 	.about-carousel {
 		width: 900px;
@@ -785,6 +797,11 @@ footer {
 	.hero {
 		background-size: 135%;
 		background-position: 100% 100%;
+	}
+
+	.hero-sus {
+		background-size: 90%;
+		background-position: 50% 90%;
 	}
 
 	.about-carousel {
@@ -873,6 +890,11 @@ footer {
 		height: 85vh;
 		background-size: 140%;
 		background-position: 100% 90%;
+	}
+
+	.hero-sus {
+		background-size: 90%;
+		background-position: 70% 90%;
 	}
 
 	.hero-bg {
@@ -988,6 +1010,11 @@ footer {
 		height: 70vh;
 		background-size: 150%;
 		background-position: 100% 100%;
+	}
+
+	.hero-sus {
+		background-position: 60% 90%;
+		background-size: 90%;
 	}
 
 	.hero-bg {
@@ -1131,6 +1158,11 @@ footer {
 		height: 70vh;
 		background-size: 170%;
 		background-position: 100% 100%;
+	}
+
+	.hero-sus {
+		background-position: 60% 90%;
+		background-size: 90%;
 	}
 
 	.hero-bg {
@@ -1283,6 +1315,11 @@ footer {
 		height: 70vh;
 		background-size: 170%;
 		background-position: 100% 100%;
+	}
+
+		.hero-sus {
+		background-position: 60% 90%;
+		background-size: 90%;
 	}
 
 	.hero-bg {
