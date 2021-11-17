@@ -999,11 +999,11 @@ footer {
 	}
 
 	.nav-cont {
-		visibility: hidden;
+		display: none;
 	}
 
 	.clog {
-		width: 30%;
+		width: 50%;
 	}
 
 	.hero {
@@ -1147,11 +1147,11 @@ footer {
 	}
 
 	.nav-cont {
-		visibility: hidden;
+		display: none;
 	}
 
 	.clog {
-		width: 30%;
+		width: 50%;
 	}
 
 	.hero {
@@ -1300,11 +1300,11 @@ footer {
 	}
 
 	.nav-cont {
-		visibility: hidden;
+		display: none;
 	}
 
 	.clog {
-		width: 40%;
+		width: 50%;
 	}
 
 	.clog2 {
