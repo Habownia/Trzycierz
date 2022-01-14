@@ -1,0 +1,9 @@
+video{
+    width: 700px;
+    height: 400px;
+    opacity: 0;
+}
+
+.visible{
+    opacity: 1;
+}
