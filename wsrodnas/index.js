@@ -8,3 +8,13 @@ function trzycierzPunk() {
 	}
 }
 Trzycierzpunk.addEventListener('click', trzycierzPunk);
+
+const dayum = document.querySelector('#dayum');
+
+function damn(){
+	alert("Damn");
+	window.open('https://www.praktycznyegzamin.pl/','_blank');
+}
+
+dayum.addEventListener('click', damn);
+

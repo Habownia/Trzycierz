@@ -1,9 +1,89 @@
-video{
-    width: 700px;
-    height: 400px;
-    opacity: 0;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-.visible{
-    opacity: 1;
+body {
+	background-color: black;
+	color: white;
+}
+
+.tpunk {
+	transition: all linear 1s;
+}
+
+.tpunk:hover {
+	transform: rotate(-70deg) scale(1.5);
+}
+
+video {
+	width: 700px;
+	height: 400px;
+	opacity: 0;
+	display: none;
+}
+
+.visible {
+	opacity: 1;
+	display: block;
+}
+
+.dayum {
+    padding: 10px;
+	position: relative;
+	max-width: 50px;
+	height: 20px;
+	animation: mymove 5s infinite;
+    cursor: pointer;
+}
+
+.bingc{
+    width: 700px;
+    height: 20px;
+    position: relative;
+    animation: obrot 4s infinite;
+}
+
+@keyframes mymove {
+	0% {
+		top: 0px;
+		left: 0px;
+		background: red;
+	}
+	25% {
+		top: 0px;
+		left: 1000px;
+		background: blue;
+        transform: skew(20deg,40deg);
+	}
+	50% {
+		top: 100px;
+		left: 100px;
+		background: yellow;
+        transform: skew(40deg,0);
+	}
+	75% {
+		top: 1000px;
+		left: 0px;
+		background: green;
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		background: red;
+	}
+}
+
+@keyframes obrot{
+    from{
+        top: 100px;
+        left: 100px;
+        transform-origin: 10px;
+    }
+    to{
+        top: 0;
+        left: 200px;
+        transform: rotate(360deg);
+        transform-origin: 90px;
+    }
 }
