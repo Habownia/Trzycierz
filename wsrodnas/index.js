@@ -18,3 +18,18 @@ function damn(){
 
 dayum.addEventListener('click', damn);
 
+// Silnia epic 
+function siiiiilnia(){
+	let liczba = document.getElementById('silnia').value;
+	let silnia = 1;
+	for (let i = 1; i<=liczba;i++){silnia *= i;}
+	document.getElementById('silnia2').innerHTML = silnia;
+}
+
+document.addEventListener("keyup",function(e){
+	var key = e.which||e.keyCode;
+	if(key == 18){
+		document.getElementById("alt").innerHTML = "Czemu alt tabujesz?????";
+	}
+	}
+ );

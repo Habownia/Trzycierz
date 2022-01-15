@@ -10,10 +10,11 @@ body {
 
 .tpunk {
 	transition: all linear 1s;
+	cursor: pointer;
 }
 
 .tpunk:hover {
-	transform: rotate(-70deg) scale(1.5);
+	transform: scale(1.2);
 }
 
 video {
@@ -41,7 +42,18 @@ video {
     width: 700px;
     height: 20px;
     position: relative;
-    animation: obrot 4s infinite;
+	left: 10px;
+	transform-origin: 150px;
+    animation: obrot 4s;
+}
+
+.alt{
+	font-size: 30px;
+	color: greenyellow;
+	border: 2px solid red;
+	padding: 10px;
+	width: 300px;
+	margin: 20px;
 }
 
 @keyframes mymove {
@@ -78,12 +90,10 @@ video {
     from{
         top: 100px;
         left: 100px;
-        transform-origin: 10px;
     }
     to{
         top: 0;
-        left: 200px;
+        left: 10px;
         transform: rotate(360deg);
-        transform-origin: 90px;
     }
 }
