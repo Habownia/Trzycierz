@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.answers{
+    display: flex;
+    width: 100vw;
+    height: 300px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.a{
+    padding: 10px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.q{
+    display: none;
+}
