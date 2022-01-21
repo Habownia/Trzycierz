@@ -28,11 +28,15 @@
 </head>
 
 <body>
-    <h1>Witaj w Trzycierz social credit test!!!</h1>
-    <p>Myślę, że za dobre odpowiedzi możesz otrzymać wspaniałą nagrodę</p>
-    <p>A więc na co czekasz? Ruszaj!</p>
-    <h2>Czy chciałbyś zacząć test?</h2>
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-text">
+                Trzycierz Social Credit test
+            </div>
+        </div>
+    </section>
 
+    <h2 class="question">Czy chciałbyś zacząć test?</h2>
     <div class="answers">
         <div id="q1a1" class="a a1" onclick="q1()">Tak</div>
         <div id="q1a2" class="a a2" onclick="q1()">Tak</div>
@@ -40,8 +44,10 @@
     </div>
 
     <div class="q2 q" id="q2">
-        <p>Oto pierwsze pytanie</p>
-        <p>Ile mieszkańców ma Trzycierz? (2011 r.)</p>
+        <div class="question">
+            <p>Oto pierwsze pytanie</p>
+            <p>Ile mieszkańców ma Trzycierz? (2011 r.)</p>
+        </div>
         <div class="answers">
             <div id="a1" class="a a1" onclick="q2a1();q2()">420</div>
             <div id="a2" class="a a2" onclick="q2a2();q2()">69</div>
@@ -50,7 +56,10 @@
     </div>
 
     <div class="q3 q" id="q3">
-        <p>W jakim powiacie leży Trzycierz?</p>
+        <div class="question">
+
+            <p>W jakim powiacie leży Trzycierz?</p>
+        </div>
         <div class="answers">
             <div id="a1" class="a a1" onclick="q3a1();q3()">Trzycierskim</div>
             <div id="a2" class="a a2" onclick="q3a2();q3()">Nowosądeckim</div>
@@ -58,7 +67,10 @@
         </div>
     </div>
     <div class="q4 q" id="q4">
-        <p>Jaką jednostką osadniczą jest Trzycierz?</p>
+        <div class="question">
+
+            <p>Jaką jednostką osadniczą jest Trzycierz?</p>
+        </div>
         <div class="answers">
             <div id="a1" class="a a1" onclick="q4a1();q4()">Miasto</div>
             <div id="a2" class="a a2" onclick="q4a2();q4()">Wieś</div>
@@ -69,7 +81,7 @@
     <div class="summary" id="summary">
         <p id="score"></p>
         <p id="prescription"></p>
-
+        <p id="award"></p>
     </div>
 
 </body>

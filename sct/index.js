@@ -40,23 +40,27 @@ function summary(){
     let day = d.getDate() ;
     let month = d.getMonth() + 2;
     let year = d.getFullYear();
-    let data = day + "." + month + "." + year + " r.";
+    let data;
+    if (month >= 10){
+        data = day + "." + month + "." + year + " r.";
+    }
+    else{
+        data = day + ".0" + month + "." + year + " r.";
+    }
     const end_speech = document.getElementById('prescription');
     const score = document.getElementById('score');
+    const award = document.getElementById('award')
     score.innerHTML="Twój wynik to " + points;
     if(points <= 0){
         end_speech.innerHTML="Fatalnie! Nie pokazuj mi sie na oczy. Nie wiedzieć nic o Trzycierzu? Jak mogłeś?";
-        alert("Idź się czegoś naucz na stronie trzycierz.tk!")
-        window.open('https://trzycierz.tk','_blank');
     }
     if(points > 0 && points <= 2){
         end_speech.innerHTML="Już coś kapujesz, ale nie jesteś jakiś wybitny. Miałem lepszych uczniów";
-        alert("Idź się doucz na trzycierz.tk!")
-        window.open('https://trzycierz.tk','_blank');
     }
 
     if(points > 2 && points <= 4){
-        end_speech.innerHTML="Widzę, że czegoś się nauczyłeś i nie tak łatwo cię zwieść. Brawo oto twoja nagroda!"
         alert("Twoja egzekucja została przeniesiona na " + data)
+        end_speech.innerHTML="Widzę, że czegoś się nauczyłeś i nie tak łatwo cię zwieść. Brawo oto twoja nagroda!";
+        award.innerHTML = '<a href="./img/award.png" download style="text-decoration: none; color: beige;">Twoja nagroda do pobrania 😃😃😃😃</a>';
     }
 }
