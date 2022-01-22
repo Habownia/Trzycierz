@@ -2,6 +2,8 @@
 	margin: 0;
 	padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+	text-decoration: none;
 }
 
 body{
@@ -76,4 +78,8 @@ body{
     font-size: 20px;
     color: white;
     padding-bottom: 20px;
+}
+
+.score{
+    color:rgb(169, 70, 240);
 }

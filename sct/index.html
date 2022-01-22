@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <section class="hero">
+    <section class="hero" id = "start">
         <div class="hero-bg">
             <div class="hero-text">
                 Trzycierz Social Credit test
@@ -38,9 +38,15 @@
 
     <h2 class="question">Czy chciałbyś zacząć test?</h2>
     <div class="answers">
-        <div id="q1a1" class="a a1" onclick="q1()">Tak</div>
-        <div id="q1a2" class="a a2" onclick="q1()">Tak</div>
-        <div id="q1a3" class="a a3" onclick="q1()">Tak</div>
+        <a href="index.html#q2">
+            <div id="q1a1" class="a a1" onclick="q1()">Tak</div>
+        </a>
+        <a href="index.html#q2">
+            <div id="q1a2" class="a a2" onclick="q1()">Tak</div>
+        </a>
+        <a href="index.html#q2">
+            <div id="q1a3" class="a a3" onclick="q1()">Tak</div>
+        </a>
     </div>
 
     <div class="q2 q" id="q2">
@@ -49,9 +55,15 @@
             <p>Ile mieszkańców ma Trzycierz? (2011 r.)</p>
         </div>
         <div class="answers">
-            <div id="a1" class="a a1" onclick="q2a1();q2()">420</div>
-            <div id="a2" class="a a2" onclick="q2a2();q2()">69</div>
-            <div id="a3" class="a a3" onclick="q2a3();q2()">505</div>
+            <a href="index.html#q3">
+                <div id="a1" class="a a1" onclick="q2a1();q2()">420</div>
+            </a>
+            <a href="index.html#q3">
+                <div id="a2" class="a a2" onclick="q2a2();q2()">69</div>
+            </a>
+            <a href="index.html#q3">
+                <div id="a3" class="a a3" onclick="q2a3();q2()">505</div>
+            </a>
         </div>
     </div>
 
@@ -61,9 +73,15 @@
             <p>W jakim powiacie leży Trzycierz?</p>
         </div>
         <div class="answers">
-            <div id="a1" class="a a1" onclick="q3a1();q3()">Trzycierskim</div>
-            <div id="a2" class="a a2" onclick="q3a2();q3()">Nowosądeckim</div>
-            <div id="a3" class="a a3" onclick="q3a3();q3()">Podkarpackim</div>
+            <a href="index.html#q4">
+                <div id="a1" class="a a1" onclick="q3a1();q3()">Trzycierskim</div>
+            </a>
+            <a href="index.html#q4">
+                <div id="a2" class="a a2" onclick="q3a2();q3()">Nowosądeckim</div>
+            </a>
+            <a href="index.html#q4">
+                <div id="a3" class="a a3" onclick="q3a3();q3()">Podkarpackim</div>
+            </a>
         </div>
     </div>
     <div class="q4 q" id="q4">
@@ -71,7 +89,7 @@
 
             <p>Jaką jednostką osadniczą jest Trzycierz?</p>
         </div>
-        <div class="answers">
+        <div class="answers" id="ending_answ">
             <div id="a1" class="a a1" onclick="q4a1();q4()">Miasto</div>
             <div id="a2" class="a a2" onclick="q4a2();q4()">Wieś</div>
             <div id="a3" class="a a3" onclick="q4a3();q4()">Kolonia</div>
@@ -79,7 +97,7 @@
     </div>
 
     <div class="summary" id="summary">
-        <p id="score"></p>
+        <p id="score" class="score"></p>
         <p id="prescription"></p>
         <p id="award"></p>
     </div>
