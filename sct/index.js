@@ -1,3 +1,4 @@
+window.location.href = "http://trzycierz.tk/sct/index.html";
 let points = 0;
 
 function q1() {
@@ -28,14 +29,30 @@ function q4a2() {points -= 1;}
 function q4a3() {points += 0;}
 
 function q4(){
-    // document.getElementById('q5').style.display = 'inline-block';
+    document.getElementById('q5').style.display = 'inline-block';
+}
+
+//Piąta funkcja
+function q5a1() {points += 0;}
+function q5a2() {points += 1;}
+function q5a3() {points += 2;}
+
+function q5(){
+    document.getElementById('q6').style.display = 'inline-block';
+}
+
+//Szósta funkcja
+function q6a1() {points += 0;}
+function q6a2() {points += 1;}
+function q6a3() {points += 2;}
+
+function q6(){
+    // document.getElementById('q6').style.display = 'inline-block';
     summary()
     document.getElementById('summary').style.display = 'inline-block';
     window.scrollTo(0,document.body.scrollHeight);
-    document.getElementById('ending_answ').innerHTML = '<div id="a1" class="a a1">Miasto</div><div id="a2" class="a a2">Wieś</div><div id="a3" class="a a3">Kolonia</div>'
+    document.getElementById('ending_answ').innerHTML = '<div id="a1" class="a a1">420 kg</div><div id="a2" class="a a2">391.26 ha</div><div id="a3" class="a a3">69 mld dolarów</div>';
 }
-
-
 
 function summary(){
     let d = new Date();
@@ -57,13 +74,13 @@ function summary(){
         end_speech.innerHTML = "Fatalnie! Nie pokazuj mi się na oczy. Nie wiedzieć nic o Trzycierzu? Jak mogłeś?";
         award.innerHTML = '<a href = "https://www.trzycierz.tk/" style="color: beige; text-decoration: none;"">Idź się czegoś naucz na trzycierz.tk bo ewidentnie nic nie umiesz!</a>'
     }
-    if(points > 0 && points <= 2){
+    if(points > 0 && points <= 4){
         end_speech.innerHTML="Już coś kapujesz, ale nie jesteś jakiś wybitny. Miałem lepszych uczniów";
         award.innerHTML = '<a href = "https://www.trzycierz.tk/" style="color: beige; text-decoration: none;"">Doucz się jeszcze na trzycierz.tk, a zdobędziesz potrzebną ci wiedzę!</a>'
 
     }
 
-    if(points > 2 && points <= 4){
+    if(points > 4 && points <= 6){
         alert("Twoja egzekucja została przeniesiona na " + data)
         end_speech.innerHTML="Widzę, że czegoś się nauczyłeś i nie tak łatwo cię zwieść. Brawo oto twoja nagroda!";
     award.innerHTML = '<a href="./img/award.png" download style="color: beige; text-decoration: none;">Twoja nagroda do pobrania 😃😃😃😃</a>';
