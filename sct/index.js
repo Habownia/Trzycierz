@@ -1,4 +1,3 @@
-window.location.href = "http://trzycierz.tk/sct/index.html";
 let points = 0;
 
 function q1() {
