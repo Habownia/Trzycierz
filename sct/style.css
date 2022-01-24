@@ -52,6 +52,7 @@ body{
     height: 300px;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .a{
@@ -70,6 +71,10 @@ body{
 
 .q{
     display: none;
+}
+
+.q p{
+    font-size: 20px;
 }
 
 .summary{

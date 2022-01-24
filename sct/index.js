@@ -11,6 +11,7 @@ function q2a3() {points += 1;}
 
 function q2(){
     document.getElementById('q3').style.display = 'inline-block';
+    document.getElementById('answers2').innerHTML = '<div id="a1" class="a a1">420</div><div id="a2" class="a a2">69</div><div id="a3" class="a a3">505</div>';
 }
 
 //Trzecie pytanie
@@ -20,6 +21,7 @@ function q3a3() {points -= 1;}
 
 function q3(){
     document.getElementById('q4').style.display = 'inline-block';
+    document.getElementById('answers3').innerHTML = '<div id="a1" class="a a1">Trzycierskim</div><div id="a2" class="a a2">Nowosądeckim</div><div id="a3" class="a a3">Podkarpackim</div>';
 }
 
 //Czwarta funkcja
@@ -29,6 +31,7 @@ function q4a3() {points += 0;}
 
 function q4(){
     document.getElementById('q5').style.display = 'inline-block';
+    document.getElementById('answers4').innerHTML = '<div id="a1" class="a a1">Miasto</div><div id="a2" class="a a2">Wieś</div><div id="a3" class="a a3">Kolonia</div>';
 }
 
 //Piąta funkcja
@@ -38,6 +41,7 @@ function q5a3() {points += 2;}
 
 function q5(){
     document.getElementById('q6').style.display = 'inline-block';
+    document.getElementById('answers5').innerHTML = '<div id="a1" class="a a1">Stanisław Trzecierski</div><div id="a2" class="a a2">Stanisław Bylina</div><div id="a3" class="a a3">Jan Długosz herbu Mikopres</div>';
 }
 
 //Szósta funkcja
@@ -50,7 +54,7 @@ function q6(){
     summary()
     document.getElementById('summary').style.display = 'inline-block';
     window.scrollTo(0,document.body.scrollHeight);
-    document.getElementById('ending_answ').innerHTML = '<div id="a1" class="a a1">420 kg</div><div id="a2" class="a a2">391.26 ha</div><div id="a3" class="a a3">69 mld dolarów</div>';
+    document.getElementById('answers6').innerHTML = '<div id="a1" class="a a1">420 kg</div><div id="a2" class="a a2">391.26 ha</div><div id="a3" class="a a3">69 mld dolarów</div>';
 }
 
 function summary(){
