@@ -31,27 +31,33 @@
     <section class="hero" id="start">
         <div class="hero-bg">
             <div class="hero-text">
-                Trzycierz Social Credit test
+                <div class="title">Trzycierz Social Credit test</div>
+                <div class="hero-ps">Sprawdź swoją wiedzę o Trzycierzu!</div>
+                <a href="index.html#q1">
+                    <div class="start">Zaczynajmy!</div>
+                </a>
             </div>
         </div>
     </section>
 
-    <h2 class="question">Czy chciałbyś zacząć test?</h2>
-    <div class="answers">
-        <a href="index.html#q2">
-            <div id="q1a1" class="a a1" onclick="q1()">Tak</div>
-        </a>
-        <a href="index.html#q2">
-            <div id="q1a2" class="a a2" onclick="q1()">Tak</div>
-        </a>
-        <a href="index.html#q2">
-            <div id="q1a3" class="a a3" onclick="q1()">Tak</div>
-        </a>
+    <div id="q1">
+        <h2 class="question">Czy chciałbyś zacząć test?</h2>
+        <div class="answers">
+            <a href="index.html#q2">
+                <div id="q1a1" class="a a1" onclick="q1()">Tak</div>
+            </a>
+            <a href="index.html#q2">
+                <div id="q1a2" class="a a2" onclick="q1()">Tak</div>
+            </a>
+            <a href="index.html#q2">
+                <div id="q1a3" class="a a3" onclick="q1()">Tak</div>
+            </a>
+        </div>
     </div>
 
     <div class="q2 q" id="q2">
         <div class="question">
-            <p style="font-size: 23px; font-weight: bold;">Oto pierwsze pytanie: 😏</p>
+            <p class="q-num">Pytanie pierwsze: 😏</p>
             <p>Ile mieszkańców ma Trzycierz? (2011 r.)</p>
         </div>
         <div class="answers" id="answers2">
@@ -69,7 +75,7 @@
 
     <div class="q3 q" id="q3">
         <div class="question">
-
+            <p class="q-num">Pytanie drugie: 😎</p>
             <p>W jakim powiacie leży Trzycierz?</p>
         </div>
         <div class="answers" id="answers3">
@@ -86,7 +92,7 @@
     </div>
     <div class="q4 q" id="q4">
         <div class="question">
-
+            <p class="q-num">Pytanie trzecie: 🤔</p>
             <p>Jaką jednostką osadniczą jest Trzycierz?</p>
         </div>
         <div class="answers" id="answers4">
@@ -104,6 +110,7 @@
 
     <div class="q5 q" id="q5">
         <div class="question">
+            <p class="q-num">Pytanie czwarte: 🌌</p>
             <p>Kto był właścicielem Trzycierza w 1629 r. ?</p>
         </div>
         <div class="answers" id="answers5">
@@ -121,6 +128,7 @@
 
     <div class="q6 q" id="q6">
         <div class="question">
+            <p class="q-num">Pytanie piąte: 🐗</p>
             <p>Jaki obszar zajmuje Trzycierz?</p>
         </div>
         <div class="answers" id="answers6">
@@ -131,9 +139,11 @@
     </div>
 
     <div class="summary" id="summary">
+        <p style="font-size: 30px;">Podsumowanie testu:</p>
         <p id="score" class="score"></p>
         <p id="prescription"></p>
         <p id="award"></p>
+        <p class="reload" onclick="reload()">Restart</p>
     </div>
 
 </body>

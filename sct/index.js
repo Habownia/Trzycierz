@@ -52,7 +52,7 @@ function q6a3() {points += 2;}
 function q6(){
     // document.getElementById('q6').style.display = 'inline-block';
     summary()
-    document.getElementById('summary').style.display = 'inline-block';
+    document.getElementById('summary').style.display = 'flex';
     window.scrollTo(0,document.body.scrollHeight);
     document.getElementById('answers6').innerHTML = '<div id="a1" class="a a1">420 kg</div><div id="a2" class="a a2">391.26 ha</div><div id="a3" class="a a3">69 mld dolarów</div>';
 }
@@ -88,4 +88,8 @@ function summary(){
         end_speech.innerHTML="Widzę, że czegoś się nauczyłeś i nie tak łatwo cię zwieść. Brawo oto twoja nagroda!";
     award.innerHTML = '<a href="./img/award.png" download style="color: beige; text-decoration: none;">Twoja nagroda do pobrania 😃😃😃😃</a>';
     }
+}
+
+function reload(){
+    window.location.reload()
 }
