@@ -1,5 +1,9 @@
 let points = 0;
 
+function start(){
+    window.scrollTo(0,document.body.scrollHeight);
+}
+
 function q1() {
 	document.getElementById('q2').style.display = 'inline-block';
 }

@@ -31,13 +31,13 @@ body {
 }
 
 .hero-text {
+	height: 50vh;
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
 	color: white;
-	transform: translate(0, 30%);
+	transform: translate(0, 70%);
 }
 
 .title {
@@ -48,18 +48,18 @@ body {
 	font-size: 20px;
 }
 
-.start{
-    margin: 20px;
-    padding: 10px;
-    background: #333;
-    border: 3px solid #ffbc05;
-    color: #ffc527e5;
-    cursor: pointer;
-    transition: transform cubic-bezier(0.35,-0.58, 0, 1.07) .5s;
+.start {
+	margin: 20px;
+	padding: 10px;
+	background: #333;
+	border: 3px solid #ffbc05;
+	color: #ffc527e5;
+	cursor: pointer;
+	transition: transform cubic-bezier(0.35, -0.58, 0, 1.07) 0.5s;
 }
 
-.start:hover{
-    transform: scale(1.1)
+.start:hover {
+	transform: scale(1.1);
 }
 
 .question {
@@ -74,7 +74,7 @@ body {
 
 .answers {
 	display: flex;
-	width: 99vw;
+	width: 97vw;
 	height: 300px;
 	justify-content: space-evenly;
 	align-items: center;
@@ -130,7 +130,7 @@ body {
 .summary {
 	position: relative;
 	left: -35px;
-	width: 99vw;
+	width: 97vw;
 	text-align: center;
 	font-size: 20px;
 	color: white;
@@ -145,8 +145,8 @@ body {
 }
 
 .reload {
-	width: 6%;
-	height: 5%;
+	width: 5vw;
+	height: 5vh;
 	cursor: pointer;
 	margin: 20px;
 	padding: 5px;
@@ -157,4 +157,11 @@ body {
 .reload:hover {
 	transform: scale(1.2);
 	border: 3px solid #a946f0;
+}
+
+@media (max-width: 767px) {
+    .wave svg {
+        width: calc(161% + 1.3px);
+        height: 103px;
+    }
 }

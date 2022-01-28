@@ -787,11 +787,11 @@ footer {
 
 @media only screen and (min-width: 800px) and (max-width: 1023px) {
 	.clog {
-		width: 25%;
+		width: 15%;
 	}
 
 	.nav-cont {
-		width: 30%;
+		width: 40%;
 	}
 
 	.hero {
@@ -1284,7 +1284,7 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (min-width: 376px) and (max-width: 479px) {
 	nav {
 		width: 100vw;
 		height: 70px;
@@ -1317,7 +1317,7 @@ footer {
 		background-position: 100% 100%;
 	}
 
-		.hero-sus {
+	.hero-sus {
 		background-position: 60% 90%;
 		background-size: 90%;
 	}
@@ -1398,6 +1398,347 @@ footer {
 	.history-img {
 		width: 90vw;
 		height: 60vh;
+	}
+
+	.history-container {
+		width: 95%;
+		height: 110vh;
+		padding: 0;
+	}
+
+	.history p {
+		font-size: 19.5px;
+	}
+
+	.map {
+		flex-direction: column-reverse;
+		align-items: center;
+		padding-top: 40px;
+	}
+
+	.map-iframe {
+		width: 85vw;
+		height: 400px;
+		margin-top: 200px;
+	}
+
+	.map-container {
+		width: 90%;
+	}
+
+	.map-container h2 {
+		padding-left: 20px;
+	}
+
+	footer {
+		height: 80px;
+	}
+
+	.media {
+		width: 300px;
+	}
+
+	.media-images {
+		width: 60px;
+	}
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+	nav {
+		width: 100vw;
+		height: 70px;
+	}
+
+	nav h2 {
+		padding-left: 20px;
+		font-size: 40px;
+	}
+
+	.fas {
+		font-size: 50px;
+	}
+
+	.nav-cont {
+		display: none;
+	}
+
+	.clog {
+		width: 50%;
+	}
+
+	.clog2 {
+		width: 0;
+	}
+
+	.hero {
+		height: 70vh;
+		background-size: 170%;
+		background-position: 100% 100%;
+	}
+
+	.hero-sus {
+		background-position: 60% 90%;
+		background-size: 90%;
+	}
+
+	.hero-bg {
+		height: 70vh;
+	}
+
+	.hero h1 {
+		font-size: 50px;
+	}
+
+	.hero h2 {
+		font-size: 25px;
+	}
+
+	.hero-btn {
+		width: 110px;
+		height: 40px;
+		font-size: 16px;
+		margin: 30px;
+	}
+
+	.hero-btn:hover {
+		margin-top: 25px;
+		margin-bottom: 35px;
+	}
+
+	.about {
+		flex-direction: column;
+		height: 600px;
+	}
+
+	.about-carousel {
+		width: 350px;
+	}
+
+	.about-text {
+		position: static;
+		width: 80%;
+		height: 40%;
+		margin-bottom: 30px;
+		margin-left: 20%;
+		padding: 17px;
+	}
+
+	.about-text h2 {
+		font-size: 25px;
+		margin: 0;
+	}
+
+	.about-text p {
+		font-size: 17px;
+	}
+
+	.stats {
+		height: 130vh;
+	}
+
+	.stats-cont {
+		flex-direction: row;
+		width: 350px;
+		height: 200px;
+		margin: 30px;
+	}
+
+	.icon-cont {
+		margin: 10px 20px;
+	}
+
+	.icon {
+		width: 70px;
+	}
+
+	.ps {
+		width: 38vw;
+	}
+
+	.history {
+		flex-direction: column;
+		align-items: center;
+		height: 150vh;
+	}
+
+	.history-img {
+		width: 90vw;
+		height: 60vh;
+	}
+
+	.history-container {
+		width: 95%;
+		height: 110vh;
+		padding: 0;
+	}
+
+	.history p {
+		font-size: 19.5px;
+	}
+
+	.map {
+		flex-direction: column-reverse;
+		align-items: center;
+		padding-top: 40px;
+	}
+
+	.map-iframe {
+		width: 85vw;
+		height: 400px;
+		margin-top: 200px;
+	}
+
+	.map-container {
+		width: 90%;
+	}
+
+	.map-container h2 {
+		padding-left: 20px;
+	}
+
+	footer {
+		height: 80px;
+	}
+
+	.media {
+		width: 300px;
+	}
+
+	.media-images {
+		width: 60px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	nav {
+		width: 100vw;
+		height: 70px;
+	}
+
+	nav h2 {
+		padding-left: 20px;
+		font-size: 40px;
+	}
+
+	.fas {
+		font-size: 50px;
+	}
+
+	.nav-cont {
+		display: none;
+	}
+
+	.clog {
+		width: 50%;
+	}
+
+	.clog2 {
+		width: 0;
+	}
+
+	.hero {
+		height: 70vh;
+		background-size: 170%;
+		background-position: 100% 100%;
+	}
+
+	.hero-sus {
+		background-position: 60% 90%;
+		background-size: 90%;
+	}
+
+	.hero-bg {
+		height: 70vh;
+	}
+
+	.hero h1 {
+		font-size: 50px;
+	}
+
+	.hero h2 {
+		font-size: 25px;
+	}
+
+	.hero-btn {
+		width: 110px;
+		height: 40px;
+		font-size: 16px;
+		margin: 30px;
+	}
+
+	.hero-btn:hover {
+		margin-top: 25px;
+		margin-bottom: 35px;
+	}
+
+	.about {
+		flex-direction: column;
+		height: 600px;
+	}
+
+	.about-carousel {
+		width: 300px;
+	}
+
+	.about-text {
+		position: static;
+		width: 80%;
+		height: 40%;
+		margin-bottom: 30px;
+		margin-left: 20%;
+		padding: 17px;
+	}
+
+	.about-text h2 {
+		font-size: 25px;
+		margin: 0;
+	}
+
+	.about-text p {
+		font-size: 17px;
+	}
+
+	.stats {
+		height: 130vh;
+	}
+
+	.stats-cont {
+		flex-direction: row;
+		width: 300px;
+		height: 80px;
+		margin: 70px;
+	}
+
+	.icon-cont {
+		margin: 5px 5px;
+	}
+
+	.icon {
+		width: 50px;
+	}
+
+	.icon-cont:hover {
+		transform: scale(1.08);
+	}
+
+	.ps {
+		width: 30vw;
+		height: 30vh;
+		font-size: 13.5px;
+	}
+
+	.history {
+		flex-direction: column;
+		align-items: center;
+		height: 170vh;
+	}
+
+	.history p {
+		font-size: 15px;
+	}
+
+	.history-img {
+		display: none;
 	}
 
 	.history-container {
