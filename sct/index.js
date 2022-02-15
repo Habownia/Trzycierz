@@ -1,27 +1,30 @@
 window.onload = function () {
-		if(window.location.pathname == '/sct/')
+	if (window.location.pathname == '/sct/')
 		window.location = window.location + 'index.html#loaded';
 };
 
-let points = 0;
 
 function start() {
 	window.scrollTo(0, document.body.scrollHeight);
 }
 
-function q1() {
-	document.getElementById('q2').style.display = 'inline-block';
-}
+let points = 0;
 
-//Pytanie drugie
-function q2a1() {
+function bad() {
 	points -= 1;
 }
-function q2a2() {
-	points += 0;
-}
-function q2a3() {
+
+function good() {
 	points += 1;
+}
+
+function magnif() {
+	points += 2;
+}
+
+
+function q1() {
+	document.getElementById('q2').style.display = 'inline-block';
 }
 
 function q2() {
@@ -33,17 +36,6 @@ function q2() {
 	document.getElementById('q2a3').style.border = '3px solid green';
 }
 
-//Trzecie pytanie
-function q3a1() {
-	points += 1;
-}
-function q3a2() {
-	points += 0;
-}
-function q3a3() {
-	points -= 1;
-}
-
 function q3() {
 	document.getElementById('q4').style.display = 'inline-block';
 	document.getElementById('answers3').innerHTML =
@@ -51,17 +43,6 @@ function q3() {
 	document.getElementById('q3a1').style.border = '3px solid green';
 	document.getElementById('q3a2').style.border = '3px solid red';
 	document.getElementById('q3a3').style.border = '3px solid red';
-}
-
-//Czwarta funkcja
-function q4a1() {
-	points += 1;
-}
-function q4a2() {
-	points -= 1;
-}
-function q4a3() {
-	points += 0;
 }
 
 function q4() {
@@ -73,17 +54,6 @@ function q4() {
 	document.getElementById('q4a3').style.border = '3px solid red';
 }
 
-//Piąta funkcja
-function q5a1() {
-	points += 0;
-}
-function q5a2() {
-	points += 1;
-}
-function q5a3() {
-	points += 2;
-}
-
 function q5() {
 	document.getElementById('q6').style.display = 'inline-block';
 	document.getElementById('answers5').innerHTML =
@@ -91,17 +61,6 @@ function q5() {
 	document.getElementById('q5a1').style.border = '3px solid red';
 	document.getElementById('q5a2').style.border = '3px solid green';
 	document.getElementById('q5a3').style.border = '3px solid #a946f0';
-}
-
-//Szósta funkcja
-function q6a1() {
-	points += 0;
-}
-function q6a2() {
-	points += 1;
-}
-function q6a3() {
-	points += 2;
 }
 
 function q6() {
@@ -113,18 +72,6 @@ function q6() {
 	document.getElementById('q6a3').style.border = '3px solid #a946f0';
 }
 
-//Siódma funkcja
-
-function q7a1() {
-	points += 2;
-}
-function q7a2() {
-	points += 1;
-}
-function q7a3() {
-	points += 0;
-}
-
 function q7() {
 	document.getElementById('q8').style.display = 'inline-block';
 	document.getElementById('answers7').innerHTML =
@@ -132,18 +79,6 @@ function q7() {
 	document.getElementById('q7a1').style.border = '3px solid #a946f0';
 	document.getElementById('q7a2').style.border = '3px solid green';
 	document.getElementById('q7a3').style.border = '3px solid red';
-}
-
-//Ósma funkcja
-
-function q8a1() {
-	points += 1;
-}
-function q8a2() {
-	points += 2;
-}
-function q8a3() {
-	points += 0;
 }
 
 function q8() {
