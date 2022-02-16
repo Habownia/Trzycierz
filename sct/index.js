@@ -84,7 +84,7 @@ function q7() {
 function q8() {
 	// document.getElementById('q9').style.display = 'inline-block';
 	document.getElementById('answers8').innerHTML =
-		'<div id="q8a1" class="a a1">33-322</div><div id="q8a2" class="a a2">69-420</div><div id="q8a3" class="a a3">33-312</div>';
+		'<div id="q8a1" class="a a1">33-322</div><div id="q8a2" class="a a2">21-370</div><div id="q8a3" class="a a3">69-420</div>';
 	document.getElementById('q8a1').style.border = '3px solid green';
 	document.getElementById('q8a2').style.border = '3px solid #a946f0';
 	document.getElementById('q8a3').style.border = '3px solid red';
