@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona o super miejscowości, która nazywa się Trzycierz">
+    <meta name="keywords" content="Trzycierz, najlepsza miejscowość, mertopolia, Trzycierzus">
+    <meta name="author" content="Trzycierz36">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Trzycierz</title>
+
+    <link rel="shortcut icon" href="../img/trzycierz.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section class="hero" id="start">
+        <div class="hero-bg">
+            <div class="hero-text">
+                <div class="title">trzycierzpass</div>
+                <div class="hero-ps">Stwórz swój unikalny Trzycierzpass!</div>
+            </div>
+        </div>
+    </section>
+    <section class="trzycierzpass">
+        <p class="insert">Wprowadz tekst, który zostanie zamieniony na unikalny Trzycierzpass!</p>
+        <div class="intr-cont">
+            <input type="text" id="introduce" class="introduce">
+            <button onclick="start()" class="submit" id="submit">
+                <img src="./img/lens.svg" alt="Lupa">
+            </button>
+        </div>
+        <div class="result-cont">
+            <p id="result" class="result"></p>
+            <button onclick="copy()" class="copy">Skopiuj</button>
+        </div>
+    </section>
+</body>
+<script src="./index.js"></script>
+
+</html>

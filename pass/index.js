@@ -16,9 +16,11 @@ function start() {
 			finalArray[i] = String.fromCharCode(ascii2);
 		}
 	}
-	console.log(finalArray);
 	let finalString = finalArray.join('');
 	document.getElementById('result').innerHTML = finalString;
+
+	document.querySelector('.copy').style.marginLeft = "10px";
+	document.querySelector('.result-cont').style.border = "2px solid rgb(255, 255, 255)"
 }
 
 document.getElementById('introduce').addEventListener('keyup', function (e) {
@@ -26,3 +28,12 @@ document.getElementById('introduce').addEventListener('keyup', function (e) {
 		start();
 	}
 });
+
+function copy() {
+	let range = document.createRange();
+	range.selectNode(document.getElementById("result"));
+	window.getSelection().removeAllRanges();
+	window.getSelection().addRange(range); 
+	document.execCommand("copy");
+	window.getSelection().removeAllRanges();
+}
