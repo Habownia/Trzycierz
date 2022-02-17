@@ -80,12 +80,33 @@ body {
 .result-cont {
 	display: flex;
 	align-items: center;
-	padding: 8px 10px;
+	height: 40px;
+	padding: 0px 10px;
+	margin: 20px;
 }
 
 .copy {
-	width: 50px;
-    margin-left: 0px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	right: -14px;
+	width: 80px;
+	height: 40px;
+	padding: 5px;
+	cursor: pointer;
+	transition: all linear .2s;
+	border: 2px solid #ffc527e5;
+	background-color: #101010;
+	color: #ffc527e5;
+}
+
+.copy:hover{
+	transform: scale(1.2);
+}
+
+.copy-show{
+	display: flex;
 }
 
 .result {
