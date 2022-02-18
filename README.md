@@ -1,2 +1,2 @@
-Super strona o Trzycierzu
-Nic dodać nic ująć
+# Strona o Trzycierzu <br> #
+Super strona o super podstronach 😉
