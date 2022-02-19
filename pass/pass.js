@@ -25,9 +25,12 @@ function start() {
 		document.querySelector('.result-cont').style.border =
 			'2px solid rgb(255, 255, 255)';
 		document.getElementById('copy').style.display = 'flex';
+		document.getElementById('result-cont').style.display = 'flex';
+
 	} else {
 		document.getElementById('result-cont').style.display = 'none';
 	}
+	console.log(finalString)
 }
 
 document.getElementById('introduce').addEventListener('keyup', function (e) {
