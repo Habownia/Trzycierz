@@ -8,9 +8,10 @@
     <meta name="description" content="Strona o super miejscowości, która nazywa się Trzycierz">
     <meta name="keywords" content="Trzycierz, najlepsza miejscowość, mertopolia, Trzycierzus">
     <meta name="author" content="Trzycierz36">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 
     <title>Trzycierz</title>
 
@@ -27,21 +28,22 @@
                 <div class="hero-ps">Stwórz swój unikalny Trzycierzpass!</div>
             </div>
         </div>
-    </section>
-    <section class="trzycierzpass">
-        <p class="insert">Wprowadz tekst, który zostanie zamieniony na unikalny Trzycierzpass!</p>
-        <div class="intr-cont">
-            <input type="text" id="introduce" class="introduce">
-            <button onclick="start()" class="submit" id="submit">
-                <img src="./img/lens.svg" alt="Lupa">
-            </button>
-        </div>
-        <div id = "result-cont" class="result-cont">
-            <p id="result" class="result"></p>
-            <div onclick="copy()" id="copy" class="copy">Copy</div>
-        </div>
-    </section>
+        <section>
+            <section class="trzycierzpass">
+                <p id="quote-return" class="quote-return"></p>
+                <p class="insert">Wprowadz tekst, który zostanie zamieniony na unikalny Trzycierzpass!</p>
+                <div class="intr-cont">
+                    <input type="text" id="introduce" class="introduce">
+                    <button onclick="start()" class="submit" id="submit">
+                        <img src="./svg/lens.svg" alt="Lupa">
+                    </button>
+                </div>
+                <div id="result-cont" class="result-cont">
+                    <p id="result" class="result"></p>
+                    <div onclick="copy()" id="copy" class="copy">Copy</div>
+                </div>
+            </section>
 </body>
-<script src="./pass.css"></script>
+<script src="./pass.js"></script>
 
 </html>

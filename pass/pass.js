@@ -46,3 +46,26 @@ function copy() {
 	document.execCommand('copy');
 	window.getSelection().removeAllRanges();
 }
+
+//Losowy cyctat z Krzyżaków
+
+randomQuote = [
+	'<p class="message">Bóg pobłogosławi wszelkim uczynkom mającym na celu dobro Zakonu.</p> <span class="name">~ Zygfryd de Lowe</span>',
+	
+	'<p class="message">Kto przeciw Krzyżakowi rękę podnosi, synem ciemności jest.</p> <span  class="name">~ Hugo Danveld</span>',
+
+	'<p class="message">Mieczów ci u nas dostatek, ale i te przyjmuję jako wróżbę zwycięstwa, którą mi sam Bóg przez wasze ręce zsyła.</p> <span  class="name">~ Władysław Jagiełło</span>',
+
+	'<p class="message">Mój ci jest!</p> <span  class="name">~ Danusia</span>',
+
+	'<p class="message">Nie z Tatarami nam, ale z Niemcami na śmierć i życie.</p> <span  class="name">~ Zyndram z Maszkowic</span>',
+
+	'<p class="message">Oto jest ten, który jeszcze dziś rano mniemał się być wyższym nad wszystkie mocarze świata.</p> <span class="name">~ Władysław Jagiełło o Ulryku von Jungingen</span>',
+
+	'<p class="message">Zali cały Zakon tu leży?</p> <span class="name">~ Władysław Jagiełło</span>',
+	
+	'<p class="message">Toś mi i ty dziecko!...</p> <span  class="name">~ Jurand ze Spychowa</span>',
+];
+
+document.getElementById('quote-return').innerHTML =
+	randomQuote[Math.floor(Math.random() * randomQuote.length)];
