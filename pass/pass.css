@@ -1,3 +1,7 @@
+:root {
+	--site-height: 150vh;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -8,7 +12,7 @@
 
 body {
 	width: 100%;
-	height: 150vh;
+	height: var(--site-height);
 	font-family: 'Open Sans', sans-serif;
 	background-color: #101010;
 	color: #b8b8b8;
@@ -17,8 +21,9 @@ body {
 .hero {
 	background-color: #333;
 	background-image: url(../img/baner.jpg);
+	opacity: 0.5;
 	background-size: 100%;
-	background-position: 50% 40%;
+	background-position: 50% 80%;
 	width: 100%;
 	height: 100vh;
 }
@@ -26,7 +31,11 @@ body {
 .hero-bg {
 	display: flex;
 	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.692);
+	background: linear-gradient(
+		180deg,
+		rgba(2, 0, 36, 0) 0%,
+		rgba(16, 16, 16, 1) 90%
+	);
 	width: 100%;
 	height: 100vh;
 }
@@ -37,8 +46,9 @@ body {
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
-	color: #b8b8b8;
+	color: white;
 	transform: translate(0, 70%);
+	font-weight: bold;
 }
 
 .title {
@@ -141,4 +151,88 @@ body {
 
 .result {
 	font-size: 20px;
+}
+
+/* STOPKA */
+footer {
+	position: absolute;
+	top: var(--site-height);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #080808;
+	width: 100%;
+	height: 100px;
+	height: 15vh;
+}
+
+.media {
+	display: flex;
+	justify-content: space-between;
+	width: 40%;
+}
+
+.media-images {
+	width: 70px;
+	transition: all linear 0.3s;
+}
+
+.media-images:hover {
+	transform: scale(1.1);
+}
+
+.fill {
+	fill: #333;
+}
+.fill:hover {
+	fill: #585858;
+}
+
+.stroke {
+	stroke: #333;
+}
+
+.stroke:hover {
+	stroke: #585858;
+}
+
+.copy-anim {
+	width: 15%;
+	height: 10vh;
+	position: fixed;
+	top: -200px;
+	left: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translate(-50%, 0);
+	background-color: rgba(90, 75, 75, 0.52);
+	margin: 10px 0;
+	border-radius: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	color: rgb(170, 160, 160);
+}
+
+.anim-callout {
+	animation: copy-anim 3s ease-in-out;
+}
+
+@keyframes copy-anim {
+	0% {
+		top: -150px;
+	}
+
+	30% {
+		top: 0;
+	}
+
+	50% {
+		top: 0px;
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }

@@ -48,6 +48,10 @@ function copy() {
 	window.getSelection().addRange(range);
 	document.execCommand('copy');
 	window.getSelection().removeAllRanges();
+	let copyAnim = document.getElementById('copy-anim');
+	copyAnim.classList.remove('anim-callout'); // reset animation
+	void copyAnim.offsetWidth; // trigger reflow
+	copyAnim.classList.add('anim-callout')
 }
 
 //Losowy cyctat z Krzyżaków
