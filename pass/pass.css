@@ -1,5 +1,6 @@
 :root {
 	--site-height: 150vh;
+	--hero-height: 100vh;
 }
 
 * {
@@ -21,11 +22,11 @@ body {
 .hero {
 	background-color: #333;
 	background-image: url(../img/baner.jpg);
-	opacity: 0.5;
+	opacity: 0.8;
 	background-size: 100%;
 	background-position: 50% 80%;
 	width: 100%;
-	height: 100vh;
+	height: var(--hero-height);
 }
 
 .hero-bg {
@@ -37,7 +38,7 @@ body {
 		rgba(16, 16, 16, 1) 90%
 	);
 	width: 100%;
-	height: 100vh;
+	height: var(--hero-height);
 }
 
 .hero-text {
@@ -46,9 +47,10 @@ body {
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
-	color: white;
+	color: rgb(226, 226, 226);
 	transform: translate(0, 70%);
 	font-weight: bold;
+	text-shadow: #080808 5px 5px 8px;
 }
 
 .title {
@@ -234,5 +236,41 @@ footer {
 
 	100% {
 		opacity: 0;
+	}
+}
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+	.title {
+		font-size: 50px;
+	}
+	footer {
+		top: 1300px;
+	}
+	.media {
+		width: 300px;
+	}
+	.copy-anim {
+		width: 200px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.hero {
+		height: 80vh;
+	}
+	.hero-bg {
+		height: 80vh;
+	}
+	.title {
+		font-size: 45px;
+	}
+	footer {
+		top: 1200px;
+	}
+	.media {
+		width: 250px;
+	}
+	.copy-anim {
+		width: 200px;
 	}
 }
