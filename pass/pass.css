@@ -239,12 +239,16 @@ footer {
 	}
 }
 
-@media only screen and (min-width: 321px) and (max-width: 425px) {
+@media only screen and (min-width: 321px) and (max-width: 900px) {
+	.hero {
+		background-size: 300%;
+		background-position: 50% 0;
+	}
 	.title {
 		font-size: 50px;
 	}
 	footer {
-		top: 1300px;
+		top: 1350px;
 	}
 	.media {
 		width: 300px;
@@ -257,6 +261,8 @@ footer {
 @media only screen and (max-width: 320px) {
 	.hero {
 		height: 80vh;
+		background-size: 300%;
+		background-position: 50% 0;
 	}
 	.hero-bg {
 		height: 80vh;
