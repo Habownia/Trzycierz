@@ -26,11 +26,9 @@ function start() {
 			'2px solid rgb(255, 255, 255)';
 		document.getElementById('copy').style.display = 'flex';
 		document.getElementById('result-cont').style.display = 'flex';
-
 	} else {
 		document.getElementById('result-cont').style.display = 'none';
 	}
-	console.log(finalString)
 }
 
 document.getElementById('introduce').addEventListener('keyup', function (e) {
@@ -51,14 +49,14 @@ function copy() {
 	let copyAnim = document.getElementById('copy-anim');
 	copyAnim.classList.remove('anim-callout'); // reset animation
 	void copyAnim.offsetWidth; // trigger reflow
-	copyAnim.classList.add('anim-callout')
+	copyAnim.classList.add('anim-callout');
 }
 
 //Losowy cyctat z Krzyżaków
 
 randomQuote = [
 	'<p class="message">Bóg pobłogosławi wszelkim uczynkom mającym na celu dobro Zakonu.</p> <span class="name">~ Zygfryd de Lowe</span>',
-	
+
 	'<p class="message">Kto przeciw Krzyżakowi rękę podnosi, synem ciemności jest.</p> <span  class="name">~ Hugo Danveld</span>',
 
 	'<p class="message">Mieczów ci u nas dostatek, ale i te przyjmuję jako wróżbę zwycięstwa, którą mi sam Bóg przez wasze ręce zsyła.</p> <span  class="name">~ Władysław Jagiełło</span>',
@@ -70,7 +68,7 @@ randomQuote = [
 	'<p class="message">Oto jest ten, który jeszcze dziś rano mniemał się być wyższym nad wszystkie mocarze świata.</p> <span class="name">~ Władysław Jagiełło o Ulryku von Jungingen</span>',
 
 	'<p class="message">Zali cały Zakon tu leży?</p> <span class="name">~ Władysław Jagiełło</span>',
-	
+
 	'<p class="message">Toś mi i ty dziecko!...</p> <span  class="name">~ Jurand ze Spychowa</span>',
 ];
 

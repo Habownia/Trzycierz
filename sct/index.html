@@ -24,7 +24,7 @@
             <div class="hero-text">
                 <div class="title">Trzycierz Social Credit test</div>
                 <div class="hero-ps">Sprawdź swoją wiedzę o Trzycierzu!</div>
-                <div class="start" onclick="start()">Zaczynajmy!</div>
+                <div class="start" id="begin">Zaczynajmy!</div>
             </div>
         </div>
     </section>
@@ -33,13 +33,13 @@
         <h2 class="question">Czy chciałbyś zacząć test?</h2>
         <div class="answers">
             <a href="index.html#q2">
-                <div id="q1a1" class="a a1" onclick="q1()">Tak</div>
+                <div id="q1a1" class="a a1">Tak</div>
             </a>
             <a href="index.html#q2">
-                <div id="q1a2" class="a a2" onclick="q1()">Tak</div>
+                <div id="q1a2" class="a a2">Tak</div>
             </a>
             <a href="index.html#q2">
-                <div id="q1a3" class="a a3" onclick="q1()">Tak</div>
+                <div id="q1a3" class="a a3">Tak</div>
             </a>
         </div>
     </div>
@@ -164,7 +164,7 @@
     </div>
 
     <div class="summary" id="summary">
-        <p style="font-size: 30px;">Podsumowanie testu:</p>
+        <p class="text-summary">Podsumowanie testu:</p>
         <p id="score" class="score"></p>
         <p id="prescription"></p>
         <p id="award"></p>

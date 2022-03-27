@@ -1,12 +1,11 @@
-window.onload = function () {
+window.onload = () => {
 	if (window.location.pathname == '/sct/')
 		window.location = window.location + 'index.html#loaded';
 };
 
-
-function start() {
+document.getElementById('begin').addEventListener('click', () => {
 	window.scrollTo(0, document.body.scrollHeight);
-}
+});
 
 let points = 0;
 
@@ -22,10 +21,11 @@ function magnif() {
 	points += 2;
 }
 
-
-function q1() {
-	document.getElementById('q2').style.display = 'inline-block';
-}
+document.querySelectorAll('[id^="q1a"]').forEach((item) => {
+	item.addEventListener('click', () => {
+		document.getElementById('q2').style.display = 'inline-block';
+	});
+});
 
 function q2() {
 	document.getElementById('q3').style.display = 'inline-block';

@@ -140,6 +140,10 @@ body {
 	flex-direction: column;
 }
 
+.text-summary{
+	font-size: 30px;
+}
+
 .score {
 	color: #a946f0;
 }
