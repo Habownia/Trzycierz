@@ -1,3 +1,5 @@
+let widthOfSite = window.innerWidth;
+
 function start() {
 	const introduce = String(document.getElementById('introduce').value);
 	let finalArray = [];
@@ -18,7 +20,14 @@ function start() {
 		}
 	}
 	let finalString = finalArray.join(''); //łączenie tablicy w stringa
+
 	document.getElementById('result').innerHTML = finalString;
+
+	//sprawdzenie czy div nie przekracza max szerokości ekranu
+	if (document.getElementById('result').offsetWidth >= 0.6 * widthOfSite) {
+		document.getElementById('result').innerHTML =
+			"<b style='color: #ffc527e5'>Spokojne ✋😳</b>";
+	}
 
 	if (finalString !== '') {
 		//sprawdzanie czy nie ma pustego paragrafu
@@ -31,7 +40,7 @@ function start() {
 	}
 }
 
-document.getElementById('introduce').addEventListener('keyup', function (e) {
+document.getElementById('introduce').addEventListener('keyup', (e) => {
 	//po kliknięciu Enter pojawia się odpowiedź
 	if (e.key === 'Enter') {
 		start();
@@ -46,31 +55,19 @@ function copy() {
 	window.getSelection().addRange(range);
 	document.execCommand('copy');
 	window.getSelection().removeAllRanges();
+
 	let copyAnim = document.getElementById('copy-anim');
 	copyAnim.classList.remove('anim-callout'); // reset animation
 	void copyAnim.offsetWidth; // trigger reflow
 	copyAnim.classList.add('anim-callout');
 }
 
-//Losowy cyctat z Krzyżaków
+//Losowy cyctat z Krzyżaków zrobiony z użyciem JSON
 
-randomQuote = [
-	'<p class="message">Bóg pobłogosławi wszelkim uczynkom mającym na celu dobro Zakonu.</p> <span class="name">~ Zygfryd de Lowe</span>',
-
-	'<p class="message">Kto przeciw Krzyżakowi rękę podnosi, synem ciemności jest.</p> <span  class="name">~ Hugo Danveld</span>',
-
-	'<p class="message">Mieczów ci u nas dostatek, ale i te przyjmuję jako wróżbę zwycięstwa, którą mi sam Bóg przez wasze ręce zsyła.</p> <span  class="name">~ Władysław Jagiełło</span>',
-
-	'<p class="message">Mój ci jest!</p> <span  class="name">~ Danusia</span>',
-
-	'<p class="message">Nie z Tatarami nam, ale z Niemcami na śmierć i życie.</p> <span  class="name">~ Zyndram z Maszkowic</span>',
-
-	'<p class="message">Oto jest ten, który jeszcze dziś rano mniemał się być wyższym nad wszystkie mocarze świata.</p> <span class="name">~ Władysław Jagiełło o Ulryku von Jungingen</span>',
-
-	'<p class="message">Zali cały Zakon tu leży?</p> <span class="name">~ Władysław Jagiełło</span>',
-
-	'<p class="message">Toś mi i ty dziecko!...</p> <span  class="name">~ Jurand ze Spychowa</span>',
-];
-
-document.getElementById('quote-return').innerHTML =
-	randomQuote[Math.floor(Math.random() * randomQuote.length)];
+let json = fetch('./quote.JSON')
+	.then((response) => response.json())
+	.then(
+		(json) =>
+			(document.getElementById('quote-return').innerHTML =
+				json.quote[Math.floor(Math.random() * json.quote.length)])
+	);
