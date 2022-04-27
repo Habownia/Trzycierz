@@ -1,6 +1,7 @@
+// Dodawanie załadowanej strony
 window.onload = () => {
 	if (window.location.pathname == '/sct/')
-		window.location = window.location + 'index.html#loaded';
+		window.location = window.location + 'index.html';
 };
 
 document.getElementById('begin').addEventListener('click', () => {
@@ -21,61 +22,85 @@ function magnif() {
 	points += 2;
 }
 
+//Blokowanie nabijania nieskończoności punktów
+function noPoints(quest) {
+	document.querySelectorAll(`[id^="q${quest}a"]`).forEach((item) => {
+		item.setAttribute('onclick', '');
+	});
+}
+
 document.querySelectorAll('[id^="q1a"]').forEach((item) => {
 	item.addEventListener('click', () => {
-		document.getElementById('q2').style.display = 'inline-block';
+		addEventToInline(1);
 	});
 });
 
+// Dodawanie event listenera do każdego pytania w bloku
+function addInline(quest) {
+	document.querySelectorAll(`[id^="q${quest}a"]`).forEach((item) => {
+		item.addEventListener('click', addEventToInline(quest));
+	});
+}
+
+//Dodawanie inline block do nowego pytania
+function addEventToInline(quest) {
+	document.getElementById(`q${quest + 1}`).style.display = 'inline-block';
+}
+
+// Wywalenie onClick z html i zastąpienie js (nwm jak to zrobić xd)
+// for (let i = 1; i <= document.getElementsByClassName('q').length; i++) {
+// 	document.querySelectorAll(`[id^="q${i + 1}a"]`).forEach((item) => {
+// 		console.log();
+// 		item.addEventListener('click', () => {});
+// 	});
+// }
+
 function q2() {
-	document.getElementById('q3').style.display = 'inline-block';
-	document.getElementById('answers2').innerHTML =
-		'<div id="q2a1" class="a a1">420</div><div id="q2a2" class="a a2">69</div><div id="q2a3" class="a a3">505</div>';
+	addInline(2);
+	noPoints(2);
 	document.getElementById('q2a1').style.border = '3px solid red';
 	document.getElementById('q2a2').style.border = '3px solid red';
 	document.getElementById('q2a3').style.border = '3px solid green';
 }
 
 function q3() {
-	document.getElementById('q4').style.display = 'inline-block';
-	document.getElementById('answers3').innerHTML =
-		'<div id="q3a1" class="a a1">Trzycierskim</div><div id="q3a2" class="a a2">Nowosądeckim</div><div id="q3a3" class="a a3">Podkarpackim</div>';
+	addInline(3);
+	noPoints(3);
 	document.getElementById('q3a1').style.border = '3px solid green';
 	document.getElementById('q3a2').style.border = '3px solid red';
 	document.getElementById('q3a3').style.border = '3px solid red';
 }
 
 function q4() {
-	document.getElementById('q5').style.display = 'inline-block';
-	document.getElementById('answers4').innerHTML =
-		'<div id="q4a1" class="a a1">Miasto</div><div id="q4a2" class="a a2">Wieś</div><div id="q4a3" class="a a3">Kolonia</div>';
+	addInline(4);
+	noPoints(4);
 	document.getElementById('q4a1').style.border = '3px solid green';
 	document.getElementById('q4a2').style.border = '3px solid red';
 	document.getElementById('q4a3').style.border = '3px solid red';
 }
 
 function q5() {
-	document.getElementById('q6').style.display = 'inline-block';
-	document.getElementById('answers5').innerHTML =
-		'<div id="q5a1" class="a a1">Stanisław Trzecierski</div><div id="q5a2" class="a a2">Stanisław Bylina</div><div id="q5a3" class="a a3">Jan Długosz herbu Mikopres</div>';
+	addInline(5);
+	noPoints(5);
+
 	document.getElementById('q5a1').style.border = '3px solid red';
 	document.getElementById('q5a2').style.border = '3px solid green';
 	document.getElementById('q5a3').style.border = '3px solid #a946f0';
 }
 
 function q6() {
-	document.getElementById('q7').style.display = 'inline-block';
-	document.getElementById('answers6').innerHTML =
-		'<div id="q6a1" class="a a1">420 kg</div><div id="q6a2" class="a a2">391.26 ha</div><div id="q6a3" class="a a3">69 mld dolarów</div>';
+	addInline(6);
+	noPoints(6);
+
 	document.getElementById('q6a1').style.border = '3px solid red';
 	document.getElementById('q6a2').style.border = '3px solid green';
 	document.getElementById('q6a3').style.border = '3px solid #a946f0';
 }
 
 function q7() {
-	document.getElementById('q8').style.display = 'inline-block';
-	document.getElementById('answers7').innerHTML =
-		'<div id="q7a1" class="a a1">Trzycierzus</div><div id="q7a2" class="a a2">Trzycierz</div><div id="q7a3" class="a a3">Tżycież</div>';
+	addInline(7);
+	noPoints(7);
+
 	document.getElementById('q7a1').style.border = '3px solid #a946f0';
 	document.getElementById('q7a2').style.border = '3px solid green';
 	document.getElementById('q7a3').style.border = '3px solid red';
@@ -83,8 +108,7 @@ function q7() {
 
 function q8() {
 	// document.getElementById('q9').style.display = 'inline-block';
-	document.getElementById('answers8').innerHTML =
-		'<div id="q8a1" class="a a1">33-322</div><div id="q8a2" class="a a2">21-370</div><div id="q8a3" class="a a3">69-420</div>';
+	noPoints(8);
 	document.getElementById('q8a1').style.border = '3px solid green';
 	document.getElementById('q8a2').style.border = '3px solid #a946f0';
 	document.getElementById('q8a3').style.border = '3px solid red';
@@ -93,7 +117,6 @@ function q8() {
 
 function summary() {
 	document.getElementById('summary').style.display = 'flex';
-	window.scrollTo(0, document.body.scrollHeight);
 	let d = new Date();
 	let day = d.getDate();
 	let month = d.getMonth() + 2;
@@ -112,13 +135,13 @@ function summary() {
 		end_speech.innerHTML =
 			'Fatalnie! Nie pokazuj mi się na oczy. Nie wiedzieć nic o Trzycierzu? Jak mogłeś?';
 		award.innerHTML =
-			'<a href = "https://www.trzycierz.tk/" style="color: beige; text-decoration: none;"">Idź się czegoś naucz na trzycierz.tk bo ewidentnie nic nie umiesz!</a>';
+			'<a href = "https://www.trzycierz.tk/" style="color: #4c48ab; text-decoration: none;"">Idź się czegoś naucz na trzycierz.tk bo ewidentnie nic nie umiesz!</a>';
 	}
 	if (points > 2 && points <= 6) {
 		end_speech.innerHTML =
 			'Już coś kapujesz, ale nie jesteś jakiś wybitny. Miałem lepszych uczniów';
 		award.innerHTML =
-			'<a href = "https://www.trzycierz.tk/" style="color: beige; text-decoration: none;"">Doucz się jeszcze na trzycierz.tk, a zdobędziesz potrzebną ci wiedzę!</a>';
+			'<a href = "https://www.trzycierz.tk/" style="color: #4c48ab; text-decoration: none;"">Doucz się jeszcze na trzycierz.tk, a zdobędziesz potrzebną ci wiedzę!</a>';
 	}
 
 	if (points > 6) {
@@ -126,8 +149,10 @@ function summary() {
 		end_speech.innerHTML =
 			'Widzę, że czegoś się nauczyłeś i nie tak łatwo cię zwieść. Brawo oto twoja nagroda!';
 		award.innerHTML =
-			'<a href="./img/award.png" download style="color: beige; text-decoration: none;">Twoja nagroda do pobrania 😃😃😃😃</a>';
+			'<a href="./img/award.png" download style="color: #4c48ab; text-decoration: none;">Twoja nagroda do pobrania 😃😃😃😃</a>';
 	}
+	//scrollowanie na dół strony po skończonym teście
+	window.scrollTo(0, document.body.scrollHeight);
 }
 
 function reload() {

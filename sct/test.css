@@ -129,12 +129,11 @@ body {
 
 .summary {
 	position: relative;
-	left: -35px;
 	width: 97vw;
 	text-align: center;
 	font-size: 20px;
 	color: white;
-	padding-bottom: 20px;
+	padding: 10px;
 	display: none;
 	align-items: center;
 	flex-direction: column;
@@ -149,17 +148,21 @@ body {
 }
 
 .reload {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100px;
 	height: 50px;
 	cursor: pointer;
 	margin: 20px;
-	padding: 5px;
+	/* Żeby tekst był na środku */
+	padding-bottom: 5px;
 	transition: transform linear 0.1s;
 	border: 3px solid white;
 }
 
 .reload:hover {
-	transform: scale(1.2);
+	transform: scale(1.2) rotate(2deg);
 	border: 3px solid #a946f0;
 }
 
@@ -168,4 +171,7 @@ body {
         width: calc(161% + 1.3px);
         height: 103px;
     }
+	.summary{
+		font-size: 18px;
+	}
 }
