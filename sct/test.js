@@ -48,12 +48,26 @@ function addEventToInline(quest) {
 }
 
 // Wywalenie onClick z html i zastąpienie js (nwm jak to zrobić xd)
-// for (let i = 1; i <= document.getElementsByClassName('q').length; i++) {
-// 	document.querySelectorAll(`[id^="q${i + 1}a"]`).forEach((item) => {
-// 		console.log();
-// 		item.addEventListener('click', () => {});
-// 	});
-// }
+for (let i = 1; i <= document.getElementsByClassName('q').length; i++) {
+	document.querySelectorAll(`[id^="q${i + 1}a"]`).forEach((item) => {
+		let attr = item.getAttribute('id').match(/q\d/g).toString();
+		attr == 'q2'
+			? item.addEventListener('click', q2)
+			: attr == 'q3'
+			? item.addEventListener('click', q3)
+			: attr == 'q4'
+			? item.addEventListener('click', q4)
+			: attr == 'q5'
+			? item.addEventListener('click', q5)
+			: attr == 'q6'
+			? item.addEventListener('click', q6)
+			: attr == 'q7'
+			? item.addEventListener('click', q7)
+			: attr == 'q8'
+			? item.addEventListener('click', q8)
+			: '';
+	});
+}
 
 function q2() {
 	addInline(2);
@@ -107,8 +121,9 @@ function q7() {
 }
 
 function q8() {
-	// document.getElementById('q9').style.display = 'inline-block';
+	// addInline(8);
 	noPoints(8);
+
 	document.getElementById('q8a1').style.border = '3px solid green';
 	document.getElementById('q8a2').style.border = '3px solid #a946f0';
 	document.getElementById('q8a3').style.border = '3px solid red';
