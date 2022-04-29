@@ -22,18 +22,16 @@ function magnif() {
 	points += 2;
 }
 
+let badAnsw = '3px solid red';
+let goodAnsw = '3px solid green';
+let magnifAnsw = '3px solid #a946f0';
+
 //Blokowanie nabijania nieskończoności punktów
 function noPoints(quest) {
 	document.querySelectorAll(`[id^="q${quest}a"]`).forEach((item) => {
 		item.setAttribute('onclick', '');
 	});
 }
-
-document.querySelectorAll('[id^="q1a"]').forEach((item) => {
-	item.addEventListener('click', () => {
-		addEventToInline(1);
-	});
-});
 
 // Dodawanie event listenera do każdego pytania w bloku
 function addInline(quest) {
@@ -48,126 +46,144 @@ function addEventToInline(quest) {
 }
 
 // Wywalenie onClick z html i zastąpienie js (nwm jak to zrobić xd)
-for (let i = 1; i <= document.getElementsByClassName('q').length; i++) {
-	document.querySelectorAll(`[id^="q${i + 1}a"]`).forEach((item) => {
+for (let i = 1; i <= document.getElementsByClassName('q').length + 1; i++) {
+	document.querySelectorAll(`[id^="q${i}a"]`).forEach((item) => {
 		let attr = item.getAttribute('id').match(/q\d/g).toString();
-		attr == 'q2'
-			? item.addEventListener('click', q2)
-			: attr == 'q3'
-			? item.addEventListener('click', q3)
-			: attr == 'q4'
-			? item.addEventListener('click', q4)
-			: attr == 'q5'
-			? item.addEventListener('click', q5)
-			: attr == 'q6'
-			? item.addEventListener('click', q6)
-			: attr == 'q7'
-			? item.addEventListener('click', q7)
-			: attr == 'q8'
-			? item.addEventListener('click', q8)
-			: '';
+		switch (attr) {
+			case 'q1':
+				item.addEventListener('click', () => {
+					addEventToInline(1);
+				});
+				break;
+			case 'q2':
+				item.addEventListener('click', () => {
+					addInline(2);
+					noPoints(2);
+					//Dodanie do elementu z id x odpowiedniego stylu
+					//js interpretuje id jak zmienne globalne
+					q2a1.style.border = badAnsw;
+					q2a2.style.border = badAnsw;
+					q2a3.style.border = goodAnsw;
+				});
+				break;
+			case 'q3':
+				item.addEventListener('click', () => {
+					addInline(3);
+					noPoints(3);
+					q3a1.style.border = goodAnsw;
+					q3a2.style.border = badAnsw;
+					q3a3.style.border = badAnsw;
+				});
+				break;
+			case 'q4':
+				item.addEventListener('click', () => {
+					addInline(4);
+					noPoints(4);
+					q4a1.style.border = goodAnsw;
+					q4a2.style.border = badAnsw;
+					q4a3.style.border = badAnsw;
+				});
+				break;
+			case 'q5':
+				item.addEventListener('click', () => {
+					addInline(5);
+					noPoints(5);
+					q5a1.style.border = badAnsw;
+					q5a2.style.border = goodAnsw;
+					q5a3.style.border = magnifAnsw;
+				});
+				break;
+			case 'q6':
+				item.addEventListener('click', () => {
+					addInline(6);
+					noPoints(6);
+					q6a1.style.border = badAnsw;
+					q6a2.style.border = goodAnsw;
+					q6a3.style.border = magnifAnsw;
+				});
+				break;
+			case 'q7':
+				item.addEventListener('click', () => {
+					addInline(7);
+					noPoints(7);
+					q7a1.style.border = magnifAnsw;
+					q7a2.style.border = goodAnsw;
+					q7a3.style.border = badAnsw;
+				});
+				break;
+			case 'q8':
+				item.addEventListener('click', () => {
+					// addInline(8);
+					noPoints(8);
+					q8a1.style.border = goodAnsw;
+					q8a2.style.border = magnifAnsw;
+					q8a3.style.border = badAnsw;
+					summary();
+				});
+				break;
+		}
 	});
-}
-
-function q2() {
-	addInline(2);
-	noPoints(2);
-	document.getElementById('q2a1').style.border = '3px solid red';
-	document.getElementById('q2a2').style.border = '3px solid red';
-	document.getElementById('q2a3').style.border = '3px solid green';
-}
-
-function q3() {
-	addInline(3);
-	noPoints(3);
-	document.getElementById('q3a1').style.border = '3px solid green';
-	document.getElementById('q3a2').style.border = '3px solid red';
-	document.getElementById('q3a3').style.border = '3px solid red';
-}
-
-function q4() {
-	addInline(4);
-	noPoints(4);
-	document.getElementById('q4a1').style.border = '3px solid green';
-	document.getElementById('q4a2').style.border = '3px solid red';
-	document.getElementById('q4a3').style.border = '3px solid red';
-}
-
-function q5() {
-	addInline(5);
-	noPoints(5);
-
-	document.getElementById('q5a1').style.border = '3px solid red';
-	document.getElementById('q5a2').style.border = '3px solid green';
-	document.getElementById('q5a3').style.border = '3px solid #a946f0';
-}
-
-function q6() {
-	addInline(6);
-	noPoints(6);
-
-	document.getElementById('q6a1').style.border = '3px solid red';
-	document.getElementById('q6a2').style.border = '3px solid green';
-	document.getElementById('q6a3').style.border = '3px solid #a946f0';
-}
-
-function q7() {
-	addInline(7);
-	noPoints(7);
-
-	document.getElementById('q7a1').style.border = '3px solid #a946f0';
-	document.getElementById('q7a2').style.border = '3px solid green';
-	document.getElementById('q7a3').style.border = '3px solid red';
-}
-
-function q8() {
-	// addInline(8);
-	noPoints(8);
-
-	document.getElementById('q8a1').style.border = '3px solid green';
-	document.getElementById('q8a2').style.border = '3px solid #a946f0';
-	document.getElementById('q8a3').style.border = '3px solid red';
-	summary();
 }
 
 function summary() {
 	document.getElementById('summary').style.display = 'flex';
+
+	const end_speech = document.getElementById('prescription');
+	const score = document.getElementById('score');
+	const award = document.getElementById('award');
+	score.textContent = 'Twój wynik to ' + points;
+
+	//stworzenie linka do podsumowania
+	let link = document.createElement('a');
+	link.setAttribute('href', 'https://www.trzycierz.tk/');
+	link.setAttribute('style', 'color: #4c48ab; text-decoration: none;');
+
+	if (points <= 2) {
+		end_speech.textContent =
+			'Fatalnie! Nie pokazuj mi się na oczy. Nie wiedzieć nic o Trzycierzu? Jak mogłeś?';
+		link.textContent =
+			'Idź się czegoś naucz na trzycierz.tk bo ewidentnie nic nie umiesz!';
+	}
+	if (points > 2 && points <= 6) {
+		end_speech.textContent =
+			'Już coś kapujesz, ale nie jesteś jakiś wybitny. Miałem lepszych uczniów';
+		link.textContent =
+			'Doucz się jeszcze na trzycierz.tk, a zdobędziesz potrzebną ci wiedzę!';
+	}
+	if (points > 6) {
+		execution();
+		end_speech.textContent =
+			'Widzę, że czegoś się nauczyłeś i nie tak łatwo cię zwieść. Brawo oto twoja nagroda!';
+		link.setAttribute('href', './img/award.png');
+		link.setAttribute('download', 'download');
+		link.textContent = 'Twoja nagroda do pobrania 😃😃😃😃';
+	}
+
+	//appendowanie linku do DOMu
+	award.appendChild(link);
+
+	//scrollowanie na dół strony po skończonym teście
+	window.scrollTo(0, document.body.scrollHeight);
+}
+
+function execution() {
+	//alert z egzekucją
 	let d = new Date();
 	let day = d.getDate();
 	let month = d.getMonth() + 2;
 	let year = d.getFullYear();
 	let data;
-	if (month >= 10) {
-		data = day + '.' + month + '.' + year + ' r.';
-	} else {
-		data = day + '.0' + month + '.' + year + ' r.';
-	}
-	const end_speech = document.getElementById('prescription');
-	const score = document.getElementById('score');
-	const award = document.getElementById('award');
-	score.innerHTML = 'Twój wynik to ' + points;
-	if (points <= 2) {
-		end_speech.innerHTML =
-			'Fatalnie! Nie pokazuj mi się na oczy. Nie wiedzieć nic o Trzycierzu? Jak mogłeś?';
-		award.innerHTML =
-			'<a href = "https://www.trzycierz.tk/" style="color: #4c48ab; text-decoration: none;"">Idź się czegoś naucz na trzycierz.tk bo ewidentnie nic nie umiesz!</a>';
-	}
-	if (points > 2 && points <= 6) {
-		end_speech.innerHTML =
-			'Już coś kapujesz, ale nie jesteś jakiś wybitny. Miałem lepszych uczniów';
-		award.innerHTML =
-			'<a href = "https://www.trzycierz.tk/" style="color: #4c48ab; text-decoration: none;"">Doucz się jeszcze na trzycierz.tk, a zdobędziesz potrzebną ci wiedzę!</a>';
-	}
 
-	if (points > 6) {
-		alert('Twoja egzekucja została przeniesiona na ' + data);
-		end_speech.innerHTML =
-			'Widzę, że czegoś się nauczyłeś i nie tak łatwo cię zwieść. Brawo oto twoja nagroda!';
-		award.innerHTML =
-			'<a href="./img/award.png" download style="color: #4c48ab; text-decoration: none;">Twoja nagroda do pobrania 😃😃😃😃</a>';
+	// dodawanie zera przed miesiącem i dniem
+	if (month < 10) {
+		month = 0 + String(month);
 	}
-	//scrollowanie na dół strony po skończonym teście
-	window.scrollTo(0, document.body.scrollHeight);
+	if (day < 10) {
+		day = 0 + String(day);
+	}
+	data = day + '.' + month + '.' + year + ' r.';
+
+	alert('Twoja egzekucja została przeniesiona na ' + data);
 }
 
 function reload() {
@@ -176,5 +192,3 @@ function reload() {
 
 //Wkleić przy ostatnim pytaniu
 // summary();
-// document.getElementById('summary').style.display = 'flex';
-// window.scrollTo(0, document.body.scrollHeight);
