@@ -51,13 +51,13 @@
         </div>
         <div class="answers" id="answers2">
             <a href="index.html#q3">
-                <div id="q2a1" class="a a1" onclick="bad()">420</div>
+                <div id="q2a1" class="a a1 bad" onclick="bad()">420</div>
             </a>
             <a href="index.html#q3">
-                <div id="q2a2" class="a a2" onclick="bad()">69</div>
+                <div id="q2a2" class="a a2 bad" onclick="bad()">69</div>
             </a>
             <a href="index.html#q3">
-                <div id="q2a3" class="a a3" onclick="good()">505</div>
+                <div id="q2a3" class="a a3 good" onclick="good()">505</div>
             </a>
         </div>
     </div>
@@ -69,13 +69,13 @@
         </div>
         <div class="answers" id="answers3">
             <a href="index.html#q4">
-                <div id="q3a1" class="a a1" onclick="good()">Trzycierskim</div>
+                <div id="q3a1" class="a a1 good" onclick="good()">Trzycierskim</div>
             </a>
             <a href="index.html#q4">
-                <div id="q3a2" class="a a2" onclick="bad()">Nowosądeckim</div>
+                <div id="q3a2" class="a a2 bad" onclick="bad()">Nowosądeckim</div>
             </a>
             <a href="index.html#q4">
-                <div id="q3a3" class="a a3" onclick="bad()">Podkarpackim</div>
+                <div id="q3a3" class="a a3 bad" onclick="bad()">Podkarpackim</div>
             </a>
         </div>
     </div>
@@ -86,13 +86,13 @@
         </div>
         <div class="answers" id="answers4">
             <a href="index.html#q5">
-                <div id="q4a1" class="a a1" onclick="good()">Miasto</div>
+                <div id="q4a1" class="a a1 good" onclick="good()">Miasto</div>
             </a>
             <a href="index.html#q5">
-                <div id="q4a2" class="a a2" onclick="bad()">Wieś</div>
+                <div id="q4a2" class="a a2 bad" onclick="bad()">Wieś</div>
             </a>
             <a href="index.html#q5">
-                <div id="q4a3" class="a a3" onclick="bad()">Kolonia</div>
+                <div id="q4a3" class="a a3 bad" onclick="bad()">Kolonia</div>
             </a>
         </div>
     </div>
@@ -104,13 +104,13 @@
         </div>
         <div class="answers" id="answers5">
             <a href="index.html#q6">
-                <div id="q5a1" class="a a1" onclick="bad()">Stanisław Trzecierski</div>
+                <div id="q5a1" class="a a1 bad" onclick="bad()">Stanisław Trzecierski</div>
             </a>
             <a href="index.html#q6">
-                <div id="q5a2" class="a a2" onclick="good()">Stanisław Bylina</div>
+                <div id="q5a2" class="a a2 good" onclick="good()">Stanisław Bylina</div>
             </a>
             <a href="index.html#q6">
-                <div id="q5a3" class="a a3" onclick="magnif()">Jan Długosz herbu Mikopres</div>
+                <div id="q5a3" class="a a3 magnif" onclick="magnif()">Jan Długosz herbu Mikopres</div>
             </a>
         </div>
     </div>
@@ -122,13 +122,13 @@
         </div>
         <div class="answers" id="answers6">
             <a href="index.html#q7">
-                <div id="q6a1" class="a a1" onclick="bad()">420 kg</div>
+                <div id="q6a1" class="a a1 bad" onclick="bad()">420 kg</div>
             </a>
             <a href="index.html#q7">
-                <div id="q6a2" class="a a2" onclick="good()">391.26 ha</div>
+                <div id="q6a2" class="a a2 good" onclick="good()">391.26 ha</div>
             </a>
             <a href="index.html#q7">
-                <div id="q6a3" class="a a3" onclick="magnif()">69 mld dolarów</div>
+                <div id="q6a3" class="a a3 magnif" onclick="magnif()">69 mld dolarów</div>
             </a>
         </div>
     </div>
@@ -140,13 +140,13 @@
         </div>
         <div class="answers" id="answers7">
             <a href="index.html#q8">
-            <div id="q7a1" class="a a1" onclick="magnif()">Trzycierzus</div>
+                <div id="q7a1" class="a a1 magnif" onclick="magnif()">Trzycierzus</div>
             </a>
             <a href="index.html#q8">
-            <div id="q7a2" class="a a2" onclick="good()">Trzycież</div>
+                <div id="q7a2" class="a a2 good" onclick="good()">Trzycież</div>
             </a>
             <a href="index.html#q8">
-            <div id="q7a3" class="a a3" onclick="bad()">Tżycież</div>
+                <div id="q7a3" class="a a3 bad" onclick="bad()">Tżycież</div>
             </a>
         </div>
     </div>
@@ -157,9 +157,9 @@
             <p>Jaki jest kod pocztowy w Trzycierzu?</p>
         </div>
         <div class="answers" id="answers8">
-            <div id="q8a1" class="a a1" onclick="good()">33-322</div>
-            <div id="q8a2" class="a a2" onclick="magnif()">21-370</div>
-            <div id="q8a3" class="a a3" onclick="bad()">69-420</div>
+            <div id="q8a1" class="a a1 good" onclick="good()">33-322</div>
+            <div id="q8a2" class="a a2 magnif" onclick="magnif()">21-370</div>
+            <div id="q8a3" class="a a3 bad" onclick="bad()">69-420</div>
         </div>
     </div>
 
@@ -168,7 +168,10 @@
         <p id="score" class="score"></p>
         <p id="prescription"></p>
         <p id="award"></p>
-        <p class="reload" onclick="reload()">Restart</p>
+        <div class="buttons">
+            <p id="reload" class="reload">Restart</p>
+            <p id="show-answ" class="reload">Pokaż odpowiedzi</p>
+        </div>
     </div>
 
 </body>

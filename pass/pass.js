@@ -62,7 +62,7 @@ function copy() {
 	copyAnim.classList.add('anim-callout');
 }
 
-//Losowy cyctat z Krzyżaków zrobiony z użyciem JSON
+//Losowy cytat z Krzyżaków zrobiony z użyciem JSON
 
 let json = fetch('./quote.JSON')
 	.then((response) => response.json())

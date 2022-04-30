@@ -26,6 +26,23 @@ let badAnsw = '3px solid red';
 let goodAnsw = '3px solid green';
 let magnifAnsw = '3px solid #a946f0';
 
+document.querySelectorAll('.a').forEach((item) => {
+	let answ = String(item.className.match(/good|bad|magnif/gi));
+	item.addEventListener('click', () => {
+		// console.log(document.getElementsByClassName('good'));
+		if (answ == 'good') {
+			item.style.border = goodAnsw;
+			console.log(item);
+		}
+		if (answ == 'bad') {
+			item.style.border = badAnsw;
+		}
+		if (answ == 'magnif') {
+			item.style.border = magnifAnsw;
+		}
+	});
+});
+
 //Blokowanie nabijania nieskończoności punktów
 function noPoints(quest) {
 	document.querySelectorAll(`[id^="q${quest}a"]`).forEach((item) => {
@@ -59,65 +76,42 @@ for (let i = 1; i <= document.getElementsByClassName('q').length + 1; i++) {
 				item.addEventListener('click', () => {
 					addInline(2);
 					noPoints(2);
-					//Dodanie do elementu z id x odpowiedniego stylu
-					//js interpretuje id jak zmienne globalne
-					q2a1.style.border = badAnsw;
-					q2a2.style.border = badAnsw;
-					q2a3.style.border = goodAnsw;
 				});
 				break;
 			case 'q3':
 				item.addEventListener('click', () => {
 					addInline(3);
 					noPoints(3);
-					q3a1.style.border = goodAnsw;
-					q3a2.style.border = badAnsw;
-					q3a3.style.border = badAnsw;
 				});
 				break;
 			case 'q4':
 				item.addEventListener('click', () => {
 					addInline(4);
 					noPoints(4);
-					q4a1.style.border = goodAnsw;
-					q4a2.style.border = badAnsw;
-					q4a3.style.border = badAnsw;
 				});
 				break;
 			case 'q5':
 				item.addEventListener('click', () => {
 					addInline(5);
 					noPoints(5);
-					q5a1.style.border = badAnsw;
-					q5a2.style.border = goodAnsw;
-					q5a3.style.border = magnifAnsw;
 				});
 				break;
 			case 'q6':
 				item.addEventListener('click', () => {
 					addInline(6);
 					noPoints(6);
-					q6a1.style.border = badAnsw;
-					q6a2.style.border = goodAnsw;
-					q6a3.style.border = magnifAnsw;
 				});
 				break;
 			case 'q7':
 				item.addEventListener('click', () => {
 					addInline(7);
 					noPoints(7);
-					q7a1.style.border = magnifAnsw;
-					q7a2.style.border = goodAnsw;
-					q7a3.style.border = badAnsw;
 				});
 				break;
 			case 'q8':
-				item.addEventListener('click', () => {
+				item.addEventListener('click', function end() {
 					// addInline(8);
 					noPoints(8);
-					q8a1.style.border = goodAnsw;
-					q8a2.style.border = magnifAnsw;
-					q8a3.style.border = badAnsw;
 					summary();
 				});
 				break;
@@ -137,6 +131,7 @@ function summary() {
 	let link = document.createElement('a');
 	link.setAttribute('href', 'https://www.trzycierz.tk/');
 	link.setAttribute('style', 'color: #4c48ab; text-decoration: none;');
+	link.setAttribute('target', '_blank');
 
 	if (points <= 2) {
 		end_speech.textContent =
@@ -159,8 +154,10 @@ function summary() {
 		link.textContent = 'Twoja nagroda do pobrania 😃😃😃😃';
 	}
 
-	//appendowanie linku do DOMu
-	award.appendChild(link);
+	if (award.innerHTML == '') {
+		//appendowanie linku do DOMu
+		award.appendChild(link);
+	}
 
 	//scrollowanie na dół strony po skończonym teście
 	window.scrollTo(0, document.body.scrollHeight);
@@ -186,9 +183,24 @@ function execution() {
 	alert('Twoja egzekucja została przeniesiona na ' + data);
 }
 
-function reload() {
+//Przyciski
+
+document.getElementById('show-answ').addEventListener('click', () => {
+	Array.from(document.getElementsByClassName('good')).forEach((item) => {
+		item.style.border = goodAnsw;
+		console.log(item);
+	});
+	Array.from(document.getElementsByClassName('bad')).forEach((item) => {
+		item.style.border = badAnsw;
+	});
+	Array.from(document.getElementsByClassName('magnif')).forEach((item) => {
+		item.style.border = magnifAnsw;
+	});
+});
+
+document.getElementById('reload').addEventListener('click', () => {
 	window.location.reload();
-}
+});
 
 //Wkleić przy ostatnim pytaniu
 // summary();
