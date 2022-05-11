@@ -119,7 +119,7 @@ nav a:hover {
 	width: 160px;
 	height: 45px;
 	padding: 5px;
-	margin: 40px;
+	margin: 35px;
 	color: black;
 	border-radius: 4px;
 	background-color: rgb(255, 197, 39);
@@ -129,12 +129,37 @@ nav a:hover {
 
 .hero-btn:hover {
 	background-color: rgba(255, 197, 39, 0.555);
-	margin-top: 35px;
-	margin-bottom: 45px;
+	transform: scale(1.1);
 }
 
-.scroll-image {
-	padding: 10px;
+.mouse {
+    display: flex;
+    width: 25px;
+    height: 50px;
+    border: 2px solid #ffc527;
+    border-radius: 20px;
+}
+
+.mouse-wheel {
+	display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #ffc527;
+    border-radius: 50%;
+    margin: auto;
+	animation: move-wheel 1.5s ease-in infinite;
+}
+
+@keyframes move-wheel {
+	0% {
+		opacity: 0;
+		transform: translateY(-1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(1rem);
+	}
 }
 
 .about {
