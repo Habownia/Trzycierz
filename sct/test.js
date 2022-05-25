@@ -22,23 +22,23 @@ function magnif() {
 	points += 2;
 }
 
-let badAnsw = '3px solid red';
-let goodAnsw = '3px solid green';
-let magnifAnsw = '3px solid #a946f0';
+const badAnsw = '3px solid red';
+const goodAnsw = '3px solid green';
+const magnifAnsw = '3px solid #a946f0';
 
 document.querySelectorAll('.a').forEach((item) => {
 	let answ = String(item.className.match(/good|bad|magnif/gi));
 	item.addEventListener('click', () => {
-		// console.log(document.getElementsByClassName('good'));
-		if (answ == 'good') {
-			item.style.border = goodAnsw;
-			console.log(item);
-		}
-		if (answ == 'bad') {
-			item.style.border = badAnsw;
-		}
-		if (answ == 'magnif') {
-			item.style.border = magnifAnsw;
+		switch (answ) {
+			case 'good':
+				item.style.border = goodAnsw;
+				break;
+			case 'bad':
+				item.style.border = badAnsw;
+				break
+			case 'magnif':
+				item.style.border = magnifAnsw;
+				break;
 		}
 	});
 });
@@ -62,7 +62,7 @@ function addEventToInline(quest) {
 	document.getElementById(`q${quest + 1}`).style.display = 'inline-block';
 }
 
-// Wywalenie onClick z html i zastąpienie js (nwm jak to zrobić xd)
+// Dla elementu np.'q1a2' sprawdzamy jaką ma liczbę i dodajemy odpowiednie EventListenery
 for (let i = 1; i <= document.getElementsByClassName('q').length + 1; i++) {
 	document.querySelectorAll(`[id^="q${i}a"]`).forEach((item) => {
 		let attr = item.getAttribute('id').match(/q\d/g).toString();
@@ -109,7 +109,7 @@ for (let i = 1; i <= document.getElementsByClassName('q').length + 1; i++) {
 				});
 				break;
 			case 'q8':
-				item.addEventListener('click', function end() {
+				item.addEventListener('click', () => {
 					// addInline(8);
 					noPoints(8);
 					summary();
@@ -164,7 +164,6 @@ function summary() {
 }
 
 function execution() {
-	//alert z egzekucją
 	let d = new Date();
 	let day = d.getDate();
 	let month = d.getMonth() + 2;
@@ -180,7 +179,7 @@ function execution() {
 	}
 	data = day + '.' + month + '.' + year + ' r.';
 
-	alert('Twoja egzekucja została przeniesiona na ' + data);
+	alert('Twoja nagroda zostanie dostarczona: ' + data);
 }
 
 //Przyciski
@@ -188,7 +187,6 @@ function execution() {
 document.getElementById('show-answ').addEventListener('click', () => {
 	Array.from(document.getElementsByClassName('good')).forEach((item) => {
 		item.style.border = goodAnsw;
-		console.log(item);
 	});
 	Array.from(document.getElementsByClassName('bad')).forEach((item) => {
 		item.style.border = badAnsw;
