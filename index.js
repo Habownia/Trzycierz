@@ -1,6 +1,6 @@
 // Dodawanie załadowanej strony
 window.onload = () => {
-	if (window.location.pathname == '/sct/')
+	if (window.location.pathname !== '/index.html')
 		window.location = window.location + 'index.html';
 };
 
